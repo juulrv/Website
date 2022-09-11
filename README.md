@@ -59,15 +59,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+ De screenreader leest goed alle koppen voor. Een aantal images hebben alleen geen alt tekst om duidelijk te maken wat voor afbeelding het is. Zoals het logo en de slideshow boven aan de home pagina. Verder wordt er van elke kop vertelt welke kop dit precies is. Ook leest de screenreader de namen van de teamleden op de teampagina niet voor. De states worden ook niet voorgelezen door de screenreader. Dit is heel onhandig aangezien het menu boven aan de pagina alleen maar dropdown menu's bevat.
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  De bediening met het toetsenbord gaat in principe prima. Alleen kun je in het menu boven in de dropdown menu's wel activeren maar wordt dit niet vertelt. De hover state wordt hier toegepast op de website. Op de telefoon gewoon meteen de active state. Ook kun je op de team pagina niet verder dan de eerste kop boven aan de pagina. Na het menu stopt het. 
 
 
   #### Motoriek (shocks, elastiekjes)
@@ -77,9 +73,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  De website van de vinken heeft op dit moment nog geen dark/light mode. Verder is de website wel goed te lezen door mensen die kleurenblind zijn. Dit komt door het heldere contrast tussen elementen op de pagina. 
 
 </details>
 
