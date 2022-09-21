@@ -14,7 +14,7 @@
 
 <body>
 	<header>
-		<ul>
+        <ul>
 			<li><img src="images/foto-kansje.jpg"
 					alt="een heer van de vinken die een kansje onder de korf neemt tijdens een korfbalwedstrijd"></li>
 			<li><img src="images/foto_vrijebal.jpg"
@@ -23,21 +23,33 @@
 					alt="breede foto van alle korfbalvelden van de vinken waar getraint wordt"></li>
 			<li><img src="images/foto_jeugdteam.jpg" alt="een jeugdteam van de vinken die een wedstrijd speelt"></li>
 		</ul>
-		<button></button>
-		<nav>
-			<ul>
-				<li><a href="#">Nieuws</a></li>
-				<li><a href="#">Vereniging</a></li>
-				<li><a href="#">Senioren</a></li>
-				<li><a href="#">Jeugd</a></li>
-				<li><a href="#">Wedstrijden</a></li>
-				<li><a href="#">Agenda</a></li>
-				<li><a href="#">Sponsering</a></li>
-				<li><a href="#">Beachveld</a></li>
-				<li><a href="#">Search</a></li>
-			</ul>
-		</nav>
-	</header>
+        <section>
+            
+            <!-- het logo -->
+            <a href="#">
+                <img src="images/logo_de_vinken.png" alt="Logo korfbalvereniging de Vinken" /></a>
+
+            <!-- het menu -->
+            <nav>
+                <!-- de button is niet relevant voor screenreaders -->
+                <!-- met aria-hidden="true" 'verstop' je de button voor ze -->
+                <button aria-hidden="true">Menu</button>
+
+                <ul>
+                    <li><a class="active">Nieuws</a></li>
+                    <li><a href="#">Vereniging</a></li>
+                    <li><a href="#">Senioren</a></li>
+                    <li><a href="#">Jeugd</a></li>
+                    <li><a href="#">Wedstrijden</a></li>
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Sponsering</a></li>
+                    <li><a href="#">Beachveld</a></li>
+                    <li><a href="#">Search</a></li>
+                </ul>
+            </nav>
+
+        </section>
+    </header>
 	<main>
 		<ul>
 			<li>

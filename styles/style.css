@@ -25,7 +25,10 @@ button, summary {
 :root {
 	/* startje */
 	--color-text:#111;
+	--color-text-heading:white;
 	--color-background:#eee;
+	--color-donkerblauw:#020659;
+	--color-active:#0092D8;
 }
 
 
@@ -39,15 +42,13 @@ button, summary {
 /* jouw code */
 
 body {
-  color:var(--color-text);
-  background-color:var(--color-background);
-  width: 100%;
-  margin-left: 0;
-  margin-top:0;
-}
-
-/*Carousel header*/
-body>header{
+    margin:0;
+    background-color:var(--color-background);
+    color:var(--color-text-heading);
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body>header{
 	width:100%;
 }
 body>header>ul{
@@ -74,14 +75,204 @@ body>header>ul>li{
 }
 body>header>ul>li>img{
 width: 100%;
-max-height: 15em;
+max-height: 30em;
 }
-/* Navigatie*/
+  /*************/
+  /* DE HEADER */
+  /*************/
+  header section{
+    min-height:4em;
+    padding:0 1em;
+    background-color:var(--color-donkerblauw);
+    line-height:1;
 
-
-
-
-
+    /*Als flex parent*/
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: sticky;
+    top:0;
+    
+  
+    
+  }
+  
+  /* alle links in de header */
+  header section a {
+    padding:.5em 0;
+    color:var(--color-text-heading);
+    text-decoration:none;
+  }
+  
+  
+  
+  
+  
+  /********/
+  /* LOGO */
+  /********/
+  header section > a:first-of-type {
+    /* om het boek en de titel te positioneren */
+    display:grid;
+    grid-template-columns:min-content min-content;
+    grid-gap:.25em;
+    align-items:center;
+    
+    font-weight:bold; 
+  }
+  
+  header section > a:first-of-type img {
+    height:3em;
+  }
+  
+  
+  
+  
+  /* link icon */
+  header section > a:last-of-type img {
+    width:auto;
+    height:2em;
+  }
+  
+  
+  
+  
+  
+  /************/
+  /* HET MENU */
+  /************/
+  nav {
+   order:2;
+    
+  }
+  
+  
+  nav button {
+    padding:.5em;
+    
+    /* icon en tekst met gap-je naast elkaar */
+    display:flex;
+    align-items:center;
+    gap:.25em;
+    
+    /* standaard styling aanpassen */
+    appearance:none;
+    background-color:var(--color-donkerblauw);
+    border:none;
+    border-radius:.25em; 
+    font:inherit;
+    text-align:center;
+    color:var(--color-text-heading);
+    
+    z-index: 100;
+    position: relative;
+  }
+  
+  
+  nav.toonMenu button img {
+    content: url(https://assets.codepen.io/274456/ui-icon-cross.svg);
+    
+  }
+  
+  
+  nav ul { 
+    margin:0; 
+    padding:4em 1em 0;
+    list-style:none;
+    
+    display:flex;
+    flex-wrap:wrap;
+    gap:2em;
+    align-content:start;
+    
+    background:var(--color-donkerblauw);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+  
+    transform:translateX(100%);
+    
+  
+    
+  }
+  
+  /* als menu open is */
+  nav.toonMenu ul {
+    transform: translateX(0%);
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  nav li {
+    flex-basis:9em;
+    flex-grow:1;
+	
+  }
+  
+  
+  
+  /************************/
+  /* EEN LINK IN DE LIJST */
+  /************************/
+  nav a {
+    /* icon en tekst met gap-je naast elkaar */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    column-gap:.25em;
+    width:100%;
+    border:solid 1px var(--menu-border);
+  }
+   
+  nav a.active {
+    font-weight:bold;
+  }
+  
+  
+  
+  
+  
+  /****************************************************************/
+  /* styling voor de header als de browser minimaal 38em breed is */
+  /****************************************************************/
+  @media (min-width:45em) {
+    nav {
+        order:0;
+      
+    }
+    
+    nav button {
+        display: none;
+  
+      
+    }
+    
+    nav ul {
+        position: static;
+        transform: none;
+        padding: 0;
+        background: none;
+        
+    }
+    
+    nav li {
+        flex-basis: unset;
+        flex-grow: unset;
+    
+    }
+    
+    nav a {
+        flex-direction: column;
+      
+    }
+    
+  }
+  
+  
+  
 /* Eerste sectie (Mededelingen)*/
 body>main>ul:nth-of-type(1){
 	display:flex;
