@@ -33,6 +33,9 @@ summary {
 	--color-donkerblauw: #020659;
 	--color-active: #0092D8;
 	--color-border:grey;
+	--color-tabel-achtergrondHeading:#E6E6E6;
+	--color-tabel-achtergrondDonker:#E6E6E6;
+	--color-tabel-achtergrondLicht: #F9F9F9;
 }
 
 
@@ -384,13 +387,126 @@ main section:nth-of-type(2) p:nth-of-type(2){
 	margin-right: 1.5em;
 	padding-bottom: 2em;
 	grid-column-start: 1;
-	grid-column-end: ;
+	grid-column-end: 1;
 	grid-row-start: 1;
 	grid-row-end: 2;
 	background-color: var(--color-donkerblauw);
 	color: var(--color-text-heading);
 }
+/* naar volgende pagina buttons*/
+main section section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main section section p{
+	color: var(--color-text);
+	margin-right: 1em;
+}
+main section section button{
+	color: var(--color-text-heading);
+	background-color: var(--color-donkerblauw);
+	max-height: 3em;
+}
 
+/*corona maatregelen*/
+main section:nth-child(4){
+	background-color: var(--color-donkerblauw);
+	margin-top: 5%;
+}
+main section:nth-child(4) a{
+	text-decoration: none;
+	color: var(--color-text-heading);
+	padding: 5px;
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+}
+main section:nth-child(4) img{
+	max-width:100%;
+	order: -2;
+}
+
+/*sponsoren*/
+main section:nth-child(5){
+	background-color: var(--color-donkerblauw);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/*lid worden*/
+main>a>h1{
+	color: var(--color-text-heading);
+	background-color: var(--color-donkerblauw);
+}
+/*agenda komende twee weken*/
+main>section:nth-of-type(6)>ul>li {
+	display: grid;
+	grid-template-columns: 4.05em 4.05em auto;
+	grid-template-rows: repeat(3,3.7em);
+	column-gap: 1em;
+
+}
+
+main>section:nth-of-type(6)>ul>li>h1 {
+	grid-column-start: 3;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 1;
+	color: var(--color-text);
+}
+main>section:nth-of-type(6)>ul>li p{
+	color: var(--color-text);
+}
+main>section:nth-of-type(6)>ul>li>p:nth-of-type(1) {
+	grid-column-start: 3;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 2;
+}
+main>section:nth-of-type(6)>ul>li>p:nth-of-type(2) {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 1;
+	grid-row-end: 1;
+	background-color: var(--color-donkerblauw);
+	color: var(--color-text-heading);
+	text-align: center;
+	margin: 0;
+	padding-top: 1em;
+}
+main>section:nth-of-type(6)>ul>li>p:nth-of-type(3) {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 2;
+	grid-row-end: 2;
+	text-align: center;
+	border: solid;
+	border-color: var(--color-border);
+	
+}
+
+/* verjaardagen*/
+main>section:nth-of-type(7)>ul{
+	display: flex;
+}
+
+main>section:nth-of-type(7)>ul>li>ul li:nth-child(2n){
+	background-color: var(--color-tabel-achtergrondLicht);
+	color:var(--color-text);
+}
+main>section:nth-of-type(7)>ul>li>ul li:nth-child(2n + 1){
+	background-color: var(--color-tabel-achtergrondDonker);
+	color:var(--color-text);
+}
+main>section:nth-of-type(7)>ul>li>ul li:first-of-type{
+	background-color: var(--color-tabel-achtergrondHeading);
+	color:var(--color-text);
+	font-weight: 700;
+}
+footer{
+	background-color: var(--color-donkerblauw);
+}
 /****************************************************************/
 /* styling voor de header als de browser minimaal 40em breed is */
 /****************************************************************/
