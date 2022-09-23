@@ -64,8 +64,11 @@ p {
 	font-size: 0,6em;
 }
 
-h2 {
+h1 {
 	font-size: 1em;
+}
+h2{
+	font-size: 0.9em;
 }
 li{
 	list-style: none;
@@ -125,20 +128,15 @@ header section {
 	align-items: center;
 	position: sticky;
 	top: 0;
-
-
-
 }
 
 /* alle links in de header */
-header section nav a {
-	padding: .5em;
+header section nav li a {
 	color: var(--color-text-heading);
 	text-decoration: none;
-	padding: 1em;
 }
 
-header section a:hover {
+header section li:hover {
 	background-color: var(--color-active);
 }
 
@@ -159,7 +157,6 @@ header section>a:first-of-type img {
 	min-width: 5em;
 	min-height:5em;
 }
-
 
 
 
@@ -206,7 +203,7 @@ nav.toonMenu button img {
 }
 
 
-nav ul {
+nav>ul {
 	margin: 0;
 	padding: 4em 1em 0;
 	list-style: none;
@@ -246,12 +243,20 @@ nav li:first-of-type {
 	background-color: var(--color-active);
 
 }
+nav ul ul{
+	max-height: 0;
+	overflow: hidden;
+	transition: 1s;
+}
+nav ul ul.open{
+	max-height: 10em;
+}
 
 
 /************************/
 /* EEN LINK IN DE LIJST */
 /************************/
-nav a {
+nav li {
 	/* icon en tekst met gap-je naast elkaar */
 	display: flex;
 	justify-content: center;
@@ -261,9 +266,11 @@ nav a {
 	border: solid 1px var(--menu-border);
 }
 
-nav a.active {
+nav li.active {
 	font-weight: bold;
+	background-color: var(--color-active);
 }
+
 
 /* Eerste sectie (Mededelingen)*/
 body>main>ul:nth-of-type(1) {
@@ -295,7 +302,7 @@ body>main>ul>li>a:link {
 	color: var(--color-text);
 	text-decoration: none;
 }
-body>main>ul>li>a>p h2{
+body>main>ul>li>a>p h1{
 	color: var(--color-text);
 }
 body>main>ul>li>a>img {
@@ -308,7 +315,7 @@ body>main>ul>li>a>img {
 	max-height: 8.1em;
 }
 
-body>main>ul>li>a>h2 {
+body>main>ul>li>a>h1 {
 	grid-column-start: 2;
 	grid-column-end: 2;
 	grid-row-start: 1;
@@ -328,7 +335,7 @@ body>main>ul>li>a>p:nth-of-type(2) {
 
 /*section nieuwsberichten*/
 
-main section>h2:nth-of-type(1){
+main section>h1:nth-of-type(1){
 	display: block;
 	background-color: var(--color-donkerblauw);
 	padding-left: 2em;
@@ -357,7 +364,7 @@ main>section>ul>li>a>img {
 	padding-top: 0.8em;
 }
 
-main>section>ul>li>a>h2 {
+main>section>ul>li>a>h1 {
 	grid-column-start: 2;
 	grid-column-end: 2;
 	grid-row-start: 1;
@@ -408,11 +415,11 @@ main section section button{
 }
 
 /*corona maatregelen*/
-main section:nth-of-type(3){
+main section:nth-child(4){
 	background-color: var(--color-donkerblauw);
 	margin-top: 5%;
 }
-main section:nth-of-type(3) a{
+main section:nth-child(4) a{
 	text-decoration: none;
 	color: var(--color-text-heading);
 	padding: 5px;
@@ -420,17 +427,13 @@ main section:nth-of-type(3) a{
 	align-items: center;
 	display: flex;
 }
-main section:nth-of-type(3) a h2{
-	color: var(--color-text-heading);
-	text-align: center;
-}
-main section:nth-of-type(3) img{
+main section:nth-child(4) img{
 	max-width:100%;
 	order: -2;
 }
 
 /*sponsoren*/
-main section:nth-of-type(4){
+main section:nth-child(5){
 	background-color: var(--color-donkerblauw);
 	display: flex;
 	flex-direction: column;
@@ -438,7 +441,7 @@ main section:nth-of-type(4){
 	margin-top: 5%;
 }
 /*lid worden*/
-main>a>h2{
+main>a>h1{
 	color: var(--color-text-heading);
 	background-color: var(--color-donkerblauw);
 	text-align: center;
@@ -446,53 +449,6 @@ main>a>h2{
 	margin-left: 5%;
 	margin-right: 5%;
 }
-/* Eerst volgende wedstrijd */
-main section:nth-of-type(5){
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-main section:nth-of-type(5) h2{
-	order:1;
-}
-main section:nth-of-type(5) p{
-	color: var(--color-text);
-}
-main section:nth-of-type(5) p:nth-of-type(1){
-	order:2;
-}
-main section:nth-of-type(5) p:nth-of-type(2){
-	order:3;
-}
-main section:nth-of-type(5) p:nth-of-type(3){
-	order:5;
-}
-main section:nth-of-type(5) p:nth-of-type(4){
-	order:6;
-}
-main section:nth-of-type(5) p:nth-of-type(5){
-	order:7
-}
-main section:nth-of-type(5) p:nth-of-type(6){
-	order:9
-}
-main section:nth-of-type(5) p:nth-of-type(7){
-	order:10
-}
-main section:nth-of-type(5) img:nth-of-type(1){
-	order:4;
-}
-main section:nth-of-type(5) img:nth-of-type(2){
-	order:8;
-}
-main section:nth-of-type(5) a{
-	order:11;
-	background-color: var(--color-donkerblauw);
-	color: var(--color-text-heading);
-	padding:1em
-}
-
 /*agenda komende twee weken*/
 main>section:nth-of-type(6)>ul>li {
 	display: grid;
@@ -502,7 +458,7 @@ main>section:nth-of-type(6)>ul>li {
 
 }
 
-main>section:nth-of-type(6)>ul>li>h2 {
+main>section:nth-of-type(6)>ul>li>h1 {
 	grid-column-start: 3;
 	grid-column-end: 3;
 	grid-row-start: 1;
@@ -575,13 +531,17 @@ footer{
 footer ul{
 	margin-bottom:15%;
 }
+
 /****************************************************************/
 /* styling voor de header als de browser minimaal 40em breed is */
 /****************************************************************/
-@media (min-width:58em) {
+@media (min-width:58em) {	
+	header section{
+		justify-content: start;
+	}
 	nav {
 		order: 0;
-
+		margin: 0;
 	}
 
 	nav button {
@@ -591,6 +551,10 @@ footer ul{
 	}
 
 	nav ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
 		position: static;
 		transform: none;
 		padding: 0;
@@ -601,6 +565,7 @@ footer ul{
 	nav li {
 		flex-basis: unset;
 		flex-grow: unset;
+		padding: 1em;
 
 	}
 
@@ -629,7 +594,7 @@ footer ul{
 		padding-top: 0.8em;
 	}
 	
-	body>main>ul>li>a>h2 {
+	body>main>ul>li>a>h1 {
 		grid-column-start: 2;
 		grid-column-end: 2;
 		grid-row-start: 1;
