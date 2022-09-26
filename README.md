@@ -85,13 +85,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown_schets_volledig.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown_schets_deel1.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdown_schets_deel2.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -111,21 +111,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
+  | Quinny en Julia: Hoe steekt de html in elkaar? Is de opbouw van de html goed? Zijn alle onderdelen goed genest.
+  | Quinny: Hoe zet ik de basis op voor mijn hamburger menu?
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
-
+  Tijdens de meeting waren alleen ik en Quinny er. We kregen feedback van de studentassistenten. We hebben gekeken naar de html van onze pagina's en of deze goed genest stonden. Sommige onderdelen waren nog niet helemaal goed genest en moesten aangepast worden. Zoals items die in een ul stonden maar geen li om zich heen hadden. En verder hebben we gekeken naar punten die ik zelf kon verbeteren aan de website. Zoals de hamburger menu button die niet van vorm veranderde. En de header carousel die niet goed responive is op de originele site.
+  Verder hand Quinny nog een vraag over hoe ze het hamburgermenu het beste kon beginnen. Het antwoord op deze vraag was een unorderd list maken met de menu opties als list items
 </details>
 
 
@@ -138,27 +128,52 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  De Carousel maken is gelukt. Ik mis alleen nog de buttons die er voor zorgen dat je naar de volgende pagina kan, en de vierkantjes onderin waarmee je naar een foto kan navigeren. Verder heb ik een responsive navigatie menu gemaakt, die veranderd in een hamburger menu als het scherm kleiner wordt dan 51em. Ook is het gelukt om de nieuwsberichten vorm tegeven met grid. 
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Aron, Quinny, Britney, Julia 
+  Hoe voeg je een dropdown menu toe aan een navigatiemenu.
+  | Quinny
+  Hoe maak je een drop down icoontje. Een pijltje naar beneden
+  | Britney
+  Hoe bepaal ik mijn H1? Ik zie hem namelijk niet.
+  | Op suggestie van Sanne
+  Hoe pas ik @media toe in een navigatie menu
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+    | Aron, Quinny, Britney, Julia 
+  Hoe voeg je een dropdown menu toe aan een navigatiemenu.
+  Sanne heeft samen met ons een navigatie menu gemaakt met een drow down functie. Deze heeft hij opgeslagen in codepen. Deze code ga ik ook nodig hebben voor mijn website
+  https://codepen.io/shooft/pen/gOzGoww
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  | Quinny
+  Hoe maak je een drop down icoontje. Een pijltje naar beneden.
+  Sanne heeft samen met ons een icoontje gemaakt. Ook heeft hij hier een draaid pijltje van gemaakt zodat als je het menu opent het pijltj omdraait. De code heeft hij in codepen gezet. 
+https://codepen.io/shooft/pen/poVWpQQ
 
+  | Britney
+  Hoe bepaal ik mijn H1? Ik zie hem namelijk niet.
+
+  Antwoord op de vraag: Deze is verborgen op de pagina. Wel zodanig dat de screenreader de h1 voorleest, zodat de gebruiker van de screenreader wel weet waar de pagina over gaat. Dit doen ze op de volgende manier.
+
+  .visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+Deze code ga ik ook nodig hebben voor mijn website
+
+  | Op suggestie van Sanne
+  Hoe pas ik @media toe in een navigatie menu
+  @media heb ik al toegepast in mijn website. In het navigatiemenu. Sanne heeft de code van het navigatiemenu opgeslagen in codepen. Sanne is alleen vergeten om het menu weer in het scherm te zetten op het moment dat het scherm groter is dan 40em zag ik later. :-)
+https://codepen.io/shooft/pen/YzLrEJo
 </details>
 
 
@@ -267,7 +282,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
+  1. Voor het verbergen van content 
+  https://www.a11yproject.com/posts/how-to-hide-content/
   2. bron 2
   3. ...
 

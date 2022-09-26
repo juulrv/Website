@@ -32,9 +32,9 @@ summary {
 	--color-background: #eee;
 	--color-donkerblauw: #020659;
 	--color-active: #0092D8;
-	--color-border:grey;
-	--color-tabel-achtergrondHeading:#E6E6E6;
-	--color-tabel-achtergrondDonker:#E6E6E6;
+	--color-border: grey;
+	--color-tabel-achtergrondHeading: #E6E6E6;
+	--color-tabel-achtergrondDonker: #E6E6E6;
 	--color-tabel-achtergrondLicht: #F9F9F9;
 }
 
@@ -61,18 +61,21 @@ main {
 }
 
 p {
-	font-size: 0,6em;
+	font-size: 0, 6em;
 }
 
 h2 {
 	font-size: 1em;
 }
-li{
+
+li {
 	list-style: none;
 }
-a{
+
+a {
 	text-decoration: none;
 }
+
 body>header {
 	width: 100%;
 }
@@ -81,7 +84,80 @@ body img {
 	max-width: 100%;
 }
 
-body>header>ul {
+header section:nth-of-type(1) {
+	position: relative;
+	padding: 0;
+}
+
+header section:nth-of-type(1) button {
+	position: absolute;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+}
+
+header section:nth-of-type(1) button:nth-of-type(1) {
+	left: 0;
+	top: 50%;
+	transform: translateX(1em) rotate(0deg);
+}
+
+header section:nth-of-type(1) button:nth-of-type(2) {
+	right: 0;
+	top: 50%;
+	transform: translateX(-1em) rotate(180deg);
+}
+
+button div {
+	width: 1.5em;
+	height: 1.5em;
+	box-shadow: inset .25em -.25em 0 white;
+	transform: translateX(.25em) rotate(45deg);
+}
+
+header section:nth-of-type(1) button:nth-of-type(3){
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: .5em;
+	border:solid;
+	border-color: white;
+	background-color: lightgray;
+	top:90%;
+	left:44%
+  }
+  header section:nth-of-type(1) button:nth-of-type(4){
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: .5em;
+	border:solid;
+	border-color: white;
+	background-color: lightgray;
+	top:90%;
+	left:48%
+  }
+  header section:nth-of-type(1) button:nth-of-type(5){
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: .5em;
+	border:solid;
+	border-color: white;
+	background-color: lightgray;
+	top:90%;
+	left:52%
+  }
+  header section:nth-of-type(1) button:nth-of-type(6){
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: .5em;
+	border:solid;
+	border-color: white;
+	background-color: lightgray;
+	top:90%;
+	left:56%
+  }
+  
+
+body>header>section:nth-of-type(1)>ul {
 	display: flex;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
@@ -92,7 +168,7 @@ body>header>ul {
 	padding-left: 0;
 }
 
-body>header>ul>li {
+body>header>section:nth-of-type(1)>ul>li {
 	/*als flex kind*/
 	flex-shrink: 0;
 	flex-basis: 100%;
@@ -105,7 +181,7 @@ body>header>ul>li {
 
 }
 
-body>header>ul>li>img {
+body>header>section:nth-of-type(1)>ul>li>img {
 	width: 100%;
 	max-height: 30em;
 }
@@ -113,7 +189,7 @@ body>header>ul>li>img {
 /*************/
 /* DE HEADER */
 /*************/
-header section {
+header section:nth-of-type(2) {
 	min-height: 4em;
 	padding: 0 1em;
 	background-color: var(--color-donkerblauw);
@@ -131,14 +207,14 @@ header section {
 }
 
 /* alle links in de header */
-header section nav a {
+header section:nth-of-type(2) nav a {
 	padding: .5em;
 	color: var(--color-text-heading);
 	text-decoration: none;
 	padding: 1em;
 }
 
-header section a:hover {
+header section:nth-of-type(2) a:hover {
 	background-color: var(--color-active);
 }
 
@@ -146,7 +222,7 @@ header section a:hover {
 /********/
 /* LOGO */
 /********/
-header section>a:first-of-type {
+header section:nth-of-type(2)>a:first-of-type {
 	/* om het boek en de titel te positioneren */
 	display: grid;
 	grid-template-columns: min-content min-content;
@@ -155,16 +231,16 @@ header section>a:first-of-type {
 	font-weight: bold;
 }
 
-header section>a:first-of-type img {
+header section:nth-of-type(2)>a:first-of-type img {
 	min-width: 5em;
-	min-height:5em;
+	min-height: 5em;
 }
 
 
 
 
 /* link icon */
-header section>a:last-of-type img {
+header section:nth-of-type(2)>a:last-of-type img {
 	width: auto;
 	height: 2em;
 }
@@ -242,6 +318,7 @@ nav li {
 	border-top-color: var(--color-active);
 
 }
+
 nav li:first-of-type {
 	background-color: var(--color-active);
 
@@ -281,13 +358,13 @@ body>main>ul>li {
 	margin-bottom: 1em;
 	margin-top: 1em;
 	max-width: 40em;
-	
+
 }
 
 body>main>ul>li>a {
 	display: grid;
 	grid-template-columns: 8.1em auto;
-	grid-template-rows: repeat(2,5.4em);
+	grid-template-rows: repeat(2, 5.4em);
 	column-gap: 1em;
 }
 
@@ -295,9 +372,11 @@ body>main>ul>li>a:link {
 	color: var(--color-text);
 	text-decoration: none;
 }
-body>main>ul>li>a>p h2{
+
+body>main>ul>li>a>p h2 {
 	color: var(--color-text);
 }
+
 body>main>ul>li>a>img {
 	/*als flex kind*/
 	grid-column-start: 1;
@@ -314,6 +393,7 @@ body>main>ul>li>a>h2 {
 	grid-row-start: 1;
 	grid-row-end: 1;
 }
+
 body>main>ul>li>a>p:nth-of-type(1) {
 	grid-column-start: 2;
 	grid-column-end: 2;
@@ -328,7 +408,7 @@ body>main>ul>li>a>p:nth-of-type(2) {
 
 /*section nieuwsberichten*/
 
-main section>h2:nth-of-type(1){
+main section>h2:nth-of-type(1) {
 	display: block;
 	background-color: var(--color-donkerblauw);
 	padding-left: 2em;
@@ -338,10 +418,11 @@ main section>h2:nth-of-type(1){
 	margin-left: 1em;
 	margin-left: 1em;
 }
+
 main>section>ul>li>a {
 	display: grid;
 	grid-template-columns: 8.1em auto;
-	grid-template-rows: repeat(3,3.7em);
+	grid-template-rows: repeat(3, 3.7em);
 	column-gap: 1em;
 
 }
@@ -363,12 +444,14 @@ main>section>ul>li>a>h2 {
 	grid-row-start: 1;
 	grid-row-end: 1;
 }
+
 main>section>ul>li>a>p:nth-of-type(1) {
 	grid-column-start: 2;
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 2;
 }
+
 main>section>ul>li>a>p:nth-of-type(2) {
 	visibility: visible;
 	grid-column-start: 2;
@@ -378,7 +461,7 @@ main>section>ul>li>a>p:nth-of-type(2) {
 }
 
 /*section wedstrijdverslagen*/
-main section:nth-of-type(2) p:nth-of-type(2){
+main section:nth-of-type(2) p:nth-of-type(2) {
 	padding-top: 1em;
 	padding-left: 2em;
 	padding-right: 1em;
@@ -391,28 +474,32 @@ main section:nth-of-type(2) p:nth-of-type(2){
 	background-color: var(--color-donkerblauw);
 	color: var(--color-text-heading);
 }
+
 /* naar volgende pagina buttons*/
-main section section{
+main section section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-main section section p{
+
+main section section p {
 	color: var(--color-text);
 	margin-right: 1em;
 }
-main section section button{
+
+main section section button {
 	color: var(--color-text-heading);
 	background-color: var(--color-donkerblauw);
 	max-height: 3em;
 }
 
 /*corona maatregelen*/
-main section:nth-of-type(3){
+main section:nth-of-type(3) {
 	background-color: var(--color-donkerblauw);
 	margin-top: 5%;
 }
-main section:nth-of-type(3) a{
+
+main section:nth-of-type(3) a {
 	text-decoration: none;
 	color: var(--color-text-heading);
 	padding: 5px;
@@ -420,25 +507,28 @@ main section:nth-of-type(3) a{
 	align-items: center;
 	display: flex;
 }
-main section:nth-of-type(3) a h2{
+
+main section:nth-of-type(3) a h2 {
 	color: var(--color-text-heading);
 	text-align: center;
 }
-main section:nth-of-type(3) img{
-	max-width:100%;
+
+main section:nth-of-type(3) img {
+	max-width: 100%;
 	order: -2;
 }
 
 /*sponsoren*/
-main section:nth-of-type(4){
+main section:nth-of-type(4) {
 	background-color: var(--color-donkerblauw);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 5%;
 }
+
 /*lid worden*/
-main>a>h2{
+main>a>h2 {
 	color: var(--color-text-heading);
 	background-color: var(--color-donkerblauw);
 	text-align: center;
@@ -446,58 +536,71 @@ main>a>h2{
 	margin-left: 5%;
 	margin-right: 5%;
 }
+
 /* Eerst volgende wedstrijd */
-main section:nth-of-type(5){
+main section:nth-of-type(5) {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-main section:nth-of-type(5) h2{
-	order:1;
+
+main section:nth-of-type(5) h2 {
+	order: 1;
 }
-main section:nth-of-type(5) p{
+
+main section:nth-of-type(5) p {
 	color: var(--color-text);
 }
-main section:nth-of-type(5) p:nth-of-type(1){
-	order:2;
+
+main section:nth-of-type(5) p:nth-of-type(1) {
+	order: 2;
 }
-main section:nth-of-type(5) p:nth-of-type(2){
-	order:3;
+
+main section:nth-of-type(5) p:nth-of-type(2) {
+	order: 3;
 }
-main section:nth-of-type(5) p:nth-of-type(3){
-	order:5;
+
+main section:nth-of-type(5) p:nth-of-type(3) {
+	order: 5;
 }
-main section:nth-of-type(5) p:nth-of-type(4){
-	order:6;
+
+main section:nth-of-type(5) p:nth-of-type(4) {
+	order: 6;
 }
-main section:nth-of-type(5) p:nth-of-type(5){
-	order:7
+
+main section:nth-of-type(5) p:nth-of-type(5) {
+	order: 7
 }
-main section:nth-of-type(5) p:nth-of-type(6){
-	order:9
+
+main section:nth-of-type(5) p:nth-of-type(6) {
+	order: 9
 }
-main section:nth-of-type(5) p:nth-of-type(7){
-	order:10
+
+main section:nth-of-type(5) p:nth-of-type(7) {
+	order: 10
 }
-main section:nth-of-type(5) img:nth-of-type(1){
-	order:4;
+
+main section:nth-of-type(5) img:nth-of-type(1) {
+	order: 4;
 }
-main section:nth-of-type(5) img:nth-of-type(2){
-	order:8;
+
+main section:nth-of-type(5) img:nth-of-type(2) {
+	order: 8;
 }
-main section:nth-of-type(5) a{
-	order:11;
+
+main section:nth-of-type(5) a {
+	order: 11;
 	background-color: var(--color-donkerblauw);
 	color: var(--color-text-heading);
-	padding:1em
+	padding: 1em
 }
 
 /*agenda komende twee weken*/
 main>section:nth-of-type(6)>ul>li {
 	display: grid;
 	grid-template-columns: 4.05em 4.05em auto;
-	grid-template-rows: repeat(3,3.7em);
+	grid-template-rows: repeat(3, 3.7em);
 	column-gap: 1em;
 
 }
@@ -509,15 +612,18 @@ main>section:nth-of-type(6)>ul>li>h2 {
 	grid-row-end: 1;
 	color: var(--color-text);
 }
-main>section:nth-of-type(6)>ul>li p{
+
+main>section:nth-of-type(6)>ul>li p {
 	color: var(--color-text);
 }
+
 main>section:nth-of-type(6)>ul>li>p:nth-of-type(1) {
 	grid-column-start: 3;
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 2;
 }
+
 main>section:nth-of-type(6)>ul>li>p:nth-of-type(2) {
 	grid-column-start: 1;
 	grid-column-end: 1;
@@ -529,6 +635,7 @@ main>section:nth-of-type(6)>ul>li>p:nth-of-type(2) {
 	margin: 0;
 	padding-top: 1em;
 }
+
 main>section:nth-of-type(6)>ul>li>p:nth-of-type(3) {
 	grid-column-start: 1;
 	grid-column-end: 1;
@@ -537,44 +644,48 @@ main>section:nth-of-type(6)>ul>li>p:nth-of-type(3) {
 	text-align: center;
 	border: solid;
 	border-color: var(--color-border);
-	
+
 }
 
 /* verjaardagen*/
-main>section:nth-of-type(7)>ul{
+main>section:nth-of-type(7)>ul {
 	display: flex;
 }
 
-main>section:nth-of-type(7)>ul>li>ul li:nth-child(2n){
+main>section:nth-of-type(7)>ul>li>ul li:nth-child(2n) {
 	background-color: var(--color-tabel-achtergrondLicht);
-	color:var(--color-text);
+	color: var(--color-text);
 }
 
-main>section:nth-of-type(7)>ul>li>ul li:nth-child(2n + 1){
+main>section:nth-of-type(7)>ul>li>ul li:nth-child(2n + 1) {
 	background-color: var(--color-tabel-achtergrondDonker);
-	color:var(--color-text);
+	color: var(--color-text);
 }
 
-main>section:nth-of-type(7)>ul>li>ul li:first-of-type{
+main>section:nth-of-type(7)>ul>li>ul li:first-of-type {
 	background-color: var(--color-tabel-achtergrondHeading);
-	color:var(--color-text);
+	color: var(--color-text);
 	font-weight: 700;
 }
-main>section:nth-of-type(9)>ul{
+
+main>section:nth-of-type(9)>ul {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin:0;
+	margin: 0;
 	padding: 0;
 }
-footer{
+
+footer {
 	background-color: var(--color-donkerblauw);
-	padding-top:1%;
+	padding-top: 1%;
 	padding-left: 2%;
 }
-footer ul{
-	margin-bottom:15%;
+
+footer ul {
+	margin-bottom: 15%;
 }
+
 /****************************************************************/
 /* styling voor de header als de browser minimaal 40em breed is */
 /****************************************************************/
@@ -614,11 +725,11 @@ footer ul{
 	body>main>ul>li>a {
 		display: grid;
 		grid-template-columns: 8.1em auto;
-		grid-template-rows: repeat(2,2.7em);
+		grid-template-rows: repeat(2, 2.7em);
 		column-gap: 1em;
-	
+
 	}
-	
+
 	body>main>ul>li>a>img {
 		/*als flex kind*/
 		grid-column-start: 1;
@@ -628,19 +739,21 @@ footer ul{
 		min-width: 15%;
 		padding-top: 0.8em;
 	}
-	
+
 	body>main>ul>li>a>h2 {
 		grid-column-start: 2;
 		grid-column-end: 2;
 		grid-row-start: 1;
 		grid-row-end: 1;
 	}
+
 	body>main>ul>li>a>p:nth-of-type(1) {
 		grid-column-start: 2;
 		grid-column-end: 2;
 		grid-row-start: 2;
 		grid-row-end: 2;
 	}
+
 	body>main>ul>li>a>p:nth-of-type(2) {
 		visibility: visible;
 		grid-column-start: 2;
@@ -648,6 +761,6 @@ footer ul{
 		grid-row-start: 3;
 		grid-row-end: 3;
 	}
-	
+
 
 }
