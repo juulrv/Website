@@ -84,6 +84,7 @@ body img {
 	max-width: 100%;
 }
 
+/* Carousel header: Opmaak en positioneren buttons*/
 header section:nth-of-type(1) {
 	position: relative;
 	padding: 0;
@@ -156,7 +157,7 @@ header section:nth-of-type(1) button:nth-of-type(3){
 	left:56%
   }
   
-
+/* Carousel header: opmaak foto's en overflow */
 body>header>section:nth-of-type(1)>ul {
 	display: flex;
 	overflow-x: auto;
@@ -186,9 +187,7 @@ body>header>section:nth-of-type(1)>ul>li>img {
 	max-height: 30em;
 }
 
-/*************/
-/* DE HEADER */
-/*************/
+/* Header navigatiebalk positie logo en navigatie*/
 header section:nth-of-type(2) {
 	min-height: 4em;
 	padding: 0 1em;
@@ -206,7 +205,7 @@ header section:nth-of-type(2) {
 
 }
 
-/* alle links in de header */
+/* Opmaak alle links in de header */
 header section:nth-of-type(2) nav a {
 	padding: .5em;
 	color: var(--color-text-heading);
@@ -219,50 +218,27 @@ header section:nth-of-type(2) a:hover {
 }
 
 
-/********/
-/* LOGO */
-/********/
-header section:nth-of-type(2)>a:first-of-type {
-	/* om het boek en de titel te positioneren */
-	display: grid;
-	grid-template-columns: min-content min-content;
-	grid-gap: .25em;
-	align-items: center;
-	font-weight: bold;
-}
-
+/* Grootte logo */
 header section:nth-of-type(2)>a:first-of-type img {
 	min-width: 5em;
 	min-height: 5em;
 }
 
-
-
-
-/* link icon */
+/* Hamburger Menu grootte */
 header section:nth-of-type(2)>a:last-of-type img {
 	width: auto;
 	height: 2em;
 }
 
-/************/
-/* HET MENU */
-/************/
+
+/* Navigatie menu */
 nav {
 	order: 2;
 
 }
 
-
 nav button {
 	padding: .5em;
-
-	/* icon en tekst met gap-je naast elkaar */
-	display: flex;
-	align-items: center;
-	gap: .25em;
-
-	/* standaard styling aanpassen */
 	appearance: none;
 	background-color: var(--color-donkerblauw);
 	border: none;
@@ -282,7 +258,7 @@ nav.toonMenu button img {
 }
 
 
-nav ul {
+nav>ul {
 	margin: 0;
 	padding: 4em 1em 0;
 	list-style: none;
@@ -315,6 +291,7 @@ nav.toonMenu ul {
 nav li {
 	flex-basis: 9em;
 	flex-grow: 1;
+	max-height: 3em;
 	border-top-color: var(--color-active);
 
 }
@@ -324,23 +301,18 @@ nav li:first-of-type {
 
 }
 
-
-/************************/
-/* EEN LINK IN DE LIJST */
-/************************/
-nav a {
+/* Een linkje in de navigatie */
+nav li button {
 	/* icon en tekst met gap-je naast elkaar */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	column-gap: .25em;
 	width: 100%;
 	border: solid 1px var(--menu-border);
 }
 
-nav a.active {
+nav button.active {
 	font-weight: bold;
 }
+
+
 
 /* Eerste sectie (Mededelingen)*/
 body>main>ul:nth-of-type(1) {
@@ -553,31 +525,31 @@ main section:nth-of-type(5) p {
 	color: var(--color-text);
 }
 
-main section:nth-of-type(5) p:nth-of-type(1) {
+main section:nth-of-type(5)>p:nth-of-type(1) {
 	order: 2;
 }
 
-main section:nth-of-type(5) p:nth-of-type(2) {
+main section:nth-of-type(5)>p:nth-of-type(2) {
 	order: 3;
 }
 
-main section:nth-of-type(5) p:nth-of-type(3) {
+main section:nth-of-type(5)>p:nth-of-type(3) {
 	order: 5;
 }
 
-main section:nth-of-type(5) p:nth-of-type(4) {
+main section:nth-of-type(5)>p:nth-of-type(4) {
 	order: 6;
 }
 
-main section:nth-of-type(5) p:nth-of-type(5) {
+main section:nth-of-type(5)>p:nth-of-type(5) {
 	order: 7
 }
 
-main section:nth-of-type(5) p:nth-of-type(6) {
+main section:nth-of-type(5)>p:nth-of-type(6) {
 	order: 9
 }
 
-main section:nth-of-type(5) p:nth-of-type(7) {
+main section:nth-of-type(5)>p:nth-of-type(7) {
 	order: 10
 }
 
@@ -587,6 +559,16 @@ main section:nth-of-type(5) img:nth-of-type(1) {
 
 main section:nth-of-type(5) img:nth-of-type(2) {
 	order: 8;
+}
+
+main section:nth-of-type(5) section{
+	display: grid;
+	grid-template-columns: repeat(4, 3.5em);
+	grid-template-rows: repeat(2, 3.5em);
+	order: 11;
+}
+main section:nth-of-type(5) section p{
+	margin:0;
 }
 
 main section:nth-of-type(5) a {
@@ -695,13 +677,13 @@ footer ul {
 
 	}
 
-	nav button {
+	nav>button {
 		display: none;
 
 
 	}
 
-	nav ul {
+	nav>ul {
 		position: static;
 		transform: none;
 		padding: 0;
