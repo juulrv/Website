@@ -1,0 +1,930 @@
+/* *********************/ 
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text: #111;
+	--color-text-heading: white;
+	--color-background: #eee;
+	--color-donkerblauw: #033F73;
+	--color-active: #0092D8;
+	--color-border: grey;
+	--color-tabel-achtergrondHeading: #E6E6E6;
+	--color-tabel-achtergrondDonker: #E6E6E6;
+	--color-tabel-achtergrondLicht: #F9F9F9;
+}
+
+@media (prefers-color-scheme: dark){
+	:root {
+		--color-text: beige;
+		--color-text-heading: beige;
+		--color-background: black;
+		--color-donkerblauw: #033F73;
+		--color-active: #0092D8;
+		--color-border: grey;
+		--color-tabel-achtergrondHeading: #2a2626;
+		--color-tabel-achtergrondDonker: #212020;
+		--color-tabel-achtergrondLicht: #2d2a2a;
+		--color-focus:#9DBF21;
+	}
+}
+
+body {
+	margin: 0;
+	background-color: var(--color-background);
+	color: var(--color-text-heading);
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+main {
+	padding: 0;
+}
+
+p {
+	font-size: 0, 6em;
+}
+
+h2 {
+	font-size: 1em;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+header {
+	width: 100%;
+	position: sticky;
+	top:0;
+}
+
+img {
+	max-width: 100%;
+}
+:focus{
+	border-color: var(--color-focus);
+	border-style: solid;
+	border-width: 0.5em;
+	outline: var(--color-focus);
+}
+
+/* Om element zichtbaar te houden voor screenreader. Maar niet visueel in beeld */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Carousel header: Opmaak en positioneren buttons*/
+header section:nth-of-type(1) {
+	position: relative;
+	padding: 0;
+
+}
+
+/* Opmaak button in header */
+header section:nth-of-type(1) button {
+	position: absolute;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+}
+
+/* Button header links */
+header section:nth-of-type(1) button:nth-of-type(1) {
+	left: 0;
+	top: 50%;
+	transform: translateX(1em) rotate(0deg);
+}
+
+/* Button header rechts */
+header section:nth-of-type(1) button:nth-of-type(2) {
+	right: 0;
+	top: 50%;
+	transform: translateX(-1em) rotate(180deg);
+}
+
+/* Opmaak pijltje in div */
+/* bron sanne: */
+header section:first-of-type button div {
+	width: 1.5em;
+	height: 1.5em;
+	box-shadow: inset .25em -.25em 0 white;
+	transform: translateX(.25em) rotate(45deg);
+}
+
+/* Eerste button nav carousel */
+header section:nth-of-type(1) button:nth-of-type(3) {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: .5em;
+	border: solid;
+	border-color: white;
+	background-color: lightgray;
+	top: 90%;
+	left: 44%
+}
+
+/* Tweede button nav carousel */
+header section:nth-of-type(1) button:nth-of-type(4) {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: .5em;
+	border: solid;
+	border-color: white;
+	background-color: lightgray;
+	top: 90%;
+	left: 48%
+}
+
+/* Derde button nav carousel */
+header section:nth-of-type(1) button:nth-of-type(5) {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: .5em;
+	border: solid;
+	border-color: white;
+	background-color: lightgray;
+	top: 90%;
+	left: 52%
+}
+
+/* Vierde button nav carousel */
+header section:nth-of-type(1) button:nth-of-type(6) {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: .5em;
+	border: solid;
+	border-color: white;
+	background-color: lightgray;
+	top: 90%;
+	left: 56%
+}
+
+/* Carousel header: opmaak foto's en overflow */
+header > section:nth-of-type(1) > ul {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior: contain;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+
+}
+
+/* Scroll bar verbergen */
+/* https://codepen.io/shooft/pen/abmLRMg */
+header section ul::-webkit-scrollbar {
+	display: none;
+}
+
+header > section:nth-of-type(1) > ul > li {
+	/*als flex kind*/
+	flex-shrink: 0;
+	flex-basis: 100%;
+	scroll-snap-align: center;
+
+
+	/*als flex parent*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+body > header > section:nth-of-type(1) > ul > li > img {
+	width: 100%;
+	max-height: 30em;
+}
+
+/* Header navigatiebalk positie logo en navigatie*/
+header section:nth-of-type(2) {
+	min-height: 4em;
+	padding: 0 1em;
+	background-color: var(--color-donkerblauw);
+	line-height: 1;
+	margin-top: 0;
+
+	/*Als flex parent*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+
+
+}
+
+/* Opmaak alle links in de header */
+header section:nth-of-type(2) nav a {
+	color: var(--color-text-heading);
+	text-decoration: none;
+}
+
+
+
+/* Grootte logo */
+header section:nth-of-type(2)>a:first-of-type img {
+	min-width: 3em;
+	min-height: 3em;
+}
+
+/* Hamburger Menu grootte */
+header section:nth-of-type(2)>a:last-of-type img {
+	width: auto;
+	height: 2em;
+}
+
+
+/* Navigatie menu */
+header section:nth-of-type(2) nav {
+	order: 2;
+
+}
+
+header section:nth-of-type(2) nav button {
+	padding: .5em;
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	border-radius: .25em;
+	font: inherit;
+	text-align: center;
+	color: var(--color-text-heading);
+
+	z-index: 100;
+	position: relative;
+}
+
+
+header section:nth-of-type(2) nav.toonMenu button img {
+	content: url(https://assets.codepen.io/274456/ui-icon-cross.svg);
+
+}
+
+
+header section:nth-of-type(2) nav>ul {
+	display: flex;
+	margin: 0;
+	padding: 4em 1em 2em;
+	list-style: none;
+	gap: 0, 25em;
+	align-items: center;
+	flex-direction: column;
+	transform: translateX(-100%);
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: var(--color-donkerblauw);
+
+}
+
+header section:nth-of-type(2) nav ul li ul {
+	max-height: 0;
+	overflow: hidden;
+	position: relative;
+	transition: 1s;
+	padding-left: 0;
+}
+
+header section:nth-of-type(2) nav ul li {
+	text-align: left;
+	flex-basis: 3em;
+	border-top-color: var(--color-active);
+	padding: 0.75em
+}
+
+header section:nth-of-type(2) nav ul li:hover {
+	background-color: var(--color-active);
+}
+
+
+header section:nth-of-type(2) nav ul li ul.subMenu {
+	background-color: var(--color-donkerblauw);
+	max-height: 20em;
+	padding: 1em;
+	width: 20em;
+
+}
+
+header section:nth-of-type(2) nav.toonMenu>ul {
+	transform: translateX(0%);	
+}
+header section:nth-of-type(2) nav ul li ul li{
+	padding: 2%;
+}
+
+
+/* Een linkje in de navigatie */
+header section:nth-of-type(2) nav li button {
+	/* icon en tekst met gap-je naast elkaar */
+	width: 100%;
+	border: solid 1px var(--menu-border);
+}
+
+header section:nth-of-type(2) nav button.active {
+	font-weight: bold;
+}
+
+
+/* styling voor de header als de browser minimaal 71em breed is */
+
+@media (min-width:71em) {
+	header{
+		position: static;
+		}
+
+	header section:nth-of-type(2){
+		justify-content: space-between;
+	}
+	header section:nth-of-type(2) nav {
+		order: 0;
+	}
+
+	header section:nth-of-type(2) nav>button {
+		display: none;
+	}
+
+	header section:nth-of-type(2) nav>ul {
+		flex-direction: row;
+		position: static;
+		transform: none;
+		padding: 0;
+		background: none;
+		align-items: center;
+		width:90%
+		
+		
+	}
+
+	header section:nth-of-type(2) nav li {
+		flex-basis: unset;
+		flex-grow: unset;
+		gap: 1em;
+
+	}
+
+	header section:nth-of-type(2) nav ul li ul {
+		position: absolute;
+
+		transform: translateX(0);
+	}
+
+	header section:nth-of-type(2) nav a {
+		flex-direction: column;
+
+	}
+
+	/* aanpassing grid bij kleiner dan 71 em */
+	main{
+		display: grid;
+		grid-template-columns: 45em 20em ;
+		grid-auto-rows: 10em;
+		grid-column-gap: 8%;
+		justify-content: center;
+		}
+
+		main section:nth-of-type(4) ul{
+			display: flex;
+			flex-direction: column;
+		}
+}
+
+main section > h2:first-of-type {
+	display: block;
+	background-color: var(--color-donkerblauw);
+	padding-left: 2em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin-left: 1em;
+}
+
+/* Spelerslijst en foto */
+main > section:first-of-type{
+	/* plaats op main grid bij groot scherm */
+	grid-row-start: 1;
+	grid-row-end: 5;
+	grid-column: 1;
+}
+
+main > section:first-of-type > ul {
+	display: flex;
+    padding:0;
+}
+
+main > section:first-of-type > ul > li > ul li:nth-child(2n) {
+	background-color: var(--color-tabel-achtergrondLicht);
+	color: var(--color-text);
+}
+
+main > section:first-of-type > ul > li > ul li:nth-child(2n + 1) {
+	background-color: var(--color-tabel-achtergrondDonker);
+	color: var(--color-text);
+}
+
+main > section:first-of-type > ul > li > ul li:first-of-type {
+	background-color: var(--color-tabel-achtergrondHeading);
+	color: var(--color-text);
+	font-weight: 700;
+}
+main > section:first-of-type > ul > li:nth-of-type(2){
+	max-width: 23em;
+}
+
+
+/* Wedsrtijdprogramma */
+main > section:nth-of-type(2){
+	grid-column: 1;
+	grid-row-start: 4;
+	grid-row-end: 6;
+}
+main > section:nth-of-type(2) > ul {
+	display: flex;
+    padding:0;
+}
+
+main > section:nth-of-type(2) > ul > li > ul li:nth-child(2n) {
+	background-color: var(--color-tabel-achtergrondLicht);
+	color: var(--color-text);
+}
+
+main > section:nth-of-type(2) > ul > li > ul li:nth-child(2n + 1) {
+	background-color: var(--color-tabel-achtergrondDonker);
+	color: var(--color-text);
+}
+
+main > section:nth-of-type(2) > ul > li > ul li:first-of-type {
+	background-color: var(--color-tabel-achtergrondHeading);
+	color: var(--color-text);
+	font-weight: 700;
+}
+
+
+/* Poulestanden */
+main > section:nth-of-type(3){
+	grid-column: 1;
+	grid-row-start: 6;
+	grid-row-end: 8;
+}
+
+main>section:nth-of-type(3)>ul {
+	display: flex;
+	overflow-x: auto;
+	overscroll-behavior: contain;
+    padding:0;
+}
+
+
+main>section:nth-of-type(3)>ul>li>ul li:nth-child(2n) {
+	background-color: var(--color-tabel-achtergrondLicht);
+	color: var(--color-text);
+}
+
+main>section:nth-of-type(3)>ul>li>ul li:nth-child(2n + 1) {
+	background-color: var(--color-tabel-achtergrondDonker);
+	color: var(--color-text);
+}
+
+main>section:nth-of-type(3)>ul>li>ul li:first-of-type {
+	background-color: var(--color-tabel-achtergrondHeading);
+	color: var(--color-text);
+	font-weight: 700;
+	width:13em;
+}
+
+/* Uitslagen */
+main > section:nth-of-type(4){
+	/* plaats main grid op groot scherm */
+	grid-column: 1;
+	grid-row-start: 8;
+	grid-row-end: 9;
+}
+
+main > section:nth-of-type(4) > ul {
+	display: flex;
+	flex-direction: row;
+    padding:0;
+}
+
+main > section:nth-of-type(4) > ul > li > ul li:nth-child(2n) {
+	background-color: var(--color-tabel-achtergrondLicht);
+	color: var(--color-text);
+}
+
+main > section:nth-of-type(4) > ul > li > ul li:nth-child(2n + 1) {
+	background-color: var(--color-tabel-achtergrondDonker);
+	color: var(--color-text);
+}
+
+main > section:nth-of-type(4) > ul > li > ul li:first-of-type {
+	background-color: var(--color-tabel-achtergrondHeading);
+	color: var(--color-text);
+	font-weight: 700;
+
+}
+/*section wedstrijdverslagen*/
+main > section:nth-of-type(5){
+	/* plaats main grid op groot scherm */
+	grid-column: 1;
+	grid-row-start: 9;
+	grid-row-end: 13;
+}
+
+main > section:nth-of-type(5) > ul > li > a {
+	display: grid;
+	grid-template-columns: 8.1em auto;
+	grid-template-rows: repeat(3, 3.7em);
+	column-gap: 1em;
+}
+main section:nth-of-type(5) p:nth-of-type(1){
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 2;
+}
+main section:nth-of-type(5) p:nth-of-type(2) {
+	padding-top: 1em;
+	padding-left: 2em;
+	padding-right: 1em;
+	margin-right: 1.5em;
+	padding-bottom: 2em;
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background-color: var(--color-donkerblauw);
+	color: var(--color-text-heading);
+}
+
+
+/* naar volgende pagina buttons*/
+main section section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main section section p {
+	color: var(--color-text);
+	margin-right: 1em;
+}
+
+main section section button {
+	color: var(--color-text-heading);
+	background-color: var(--color-donkerblauw);
+	max-height: 3em;
+}
+
+/* Training schema */
+main > section:nth-of-type(6){
+	grid-column: 1;
+	grid-row-start: 13;
+	grid-row-end:14 ;
+}
+
+main>section:nth-of-type(6)>ul {
+	display: flex;
+    padding:0;
+}
+
+main>section:nth-of-type(6)>ul>li>ul li:nth-child(2n) {
+	background-color: var(--color-tabel-achtergrondLicht);
+	color: var(--color-text);
+}
+
+main>section:nth-of-type(6)>ul>li>ul li:nth-child(2n + 1) {
+	background-color: var(--color-tabel-achtergrondDonker);
+	color: var(--color-text);
+}
+
+main>section:nth-of-type(6)>ul>li>ul li:first-of-type {
+	background-color: var(--color-tabel-achtergrondHeading);
+	color: var(--color-text);
+	font-weight: 700;
+}
+
+
+
+/* Eerst volgende wedstrijd de vinken 3*/
+main section:nth-of-type(7) {
+	grid-column: 1;
+	grid-row-start: 14;
+	grid-row-end: 18;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main section:nth-of-type(7) h2 {
+	order: 1;
+}
+
+main section:nth-of-type(7) p {
+	color: var(--color-text);
+}
+
+main section:nth-of-type(7)>p:nth-of-type(1) {
+	order: 2;
+}
+
+main section:nth-of-type(7)>p:nth-of-type(2) {
+	order: 3;
+}
+
+main section:nth-of-type(7)>p:nth-of-type(3) {
+	order: 5;
+}
+
+main section:nth-of-type(7)>p:nth-of-type(4) {
+	order: 6;
+}
+
+main section:nth-of-type(7)>p:nth-of-type(5) {
+	order: 7
+}
+
+main section:nth-of-type(7)>p:nth-of-type(6) {
+	order: 9
+}
+
+main section:nth-of-type(7)>p:nth-of-type(7) {
+	order: 10
+}
+
+main section:nth-of-type(7) img:nth-of-type(1) {
+	order: 4;
+}
+
+main section:nth-of-type(7) img:nth-of-type(2) {
+	order: 8;
+}
+
+main section:nth-of-type(7) section{
+	display: grid;
+	grid-template-columns: repeat(4, 3.5em);
+	grid-template-rows: repeat(2, 3.5em);
+	order: 11;
+}
+main section:nth-of-type(7) section p{
+	margin:0;
+}
+
+main section:nth-of-type(7) a {
+	order: 11;
+	background-color: var(--color-donkerblauw);
+	color: var(--color-text-heading);
+	padding: 1em
+}
+
+main section:nth-of-type(8){
+	grid-column: 1;
+	grid-row-start: 19;
+	grid-row-end: 23;
+}
+
+main > a:first-of-type > h2{
+	color: var(--color-text-heading);
+	background-color: var(--color-donkerblauw);
+	text-align: center;
+	padding: 2%;
+	/* plaats op main grid grootscherm*/
+	grid-column: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+/* Eerst volgende wedstrijd de vinken 1*/
+main section:nth-of-type(9){
+	/* plaats op main grid grootscherm*/
+	grid-column: 2;
+	grid-row-start: 2;
+	grid-row-end: 6;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main section:nth-of-type(9) h2 {
+	order: 1;
+}
+
+main section:nth-of-type(9) p {
+	color: var(--color-text);
+}
+
+main section:nth-of-type(9)>p:nth-of-type(1) {
+	order: 2;
+}
+
+main section:nth-of-type(9)>p:nth-of-type(2) {
+	order: 3;
+}
+
+main section:nth-of-type(9)>p:nth-of-type(3) {
+	order: 5;
+}
+
+main section:nth-of-type(9)>p:nth-of-type(4) {
+	order: 6;
+}
+
+main section:nth-of-type(9)>p:nth-of-type(5) {
+	order: 7
+}
+
+main section:nth-of-type(9)>p:nth-of-type(6) {
+	order: 9
+}
+
+main section:nth-of-type(9)>p:nth-of-type(7) {
+	order: 10
+}
+
+main section:nth-of-type(9) img:nth-of-type(1) {
+	order: 4;
+}
+
+main section:nth-of-type(9) img:nth-of-type(2) {
+	order: 8;
+}
+
+main section:nth-of-type(9) section{
+	display: grid;
+	grid-template-columns: repeat(4, 3.5em);
+	grid-template-rows: repeat(2, 3.5em);
+	order: 11;
+}
+main section:nth-of-type(9) section p{
+	margin:0;
+}
+
+main section:nth-of-type(9) a {
+	order: 11;
+	background-color: var(--color-donkerblauw);
+	color: var(--color-text-heading);
+	padding: 1em
+}
+
+/*agenda komende twee weken*/
+
+main > section:nth-of-type(10){
+	/* plaats op main grid grootscherm*/
+	grid-column: 2;
+	grid-row-start: 6;
+	grid-row-end: 13;
+}
+
+main > section:nth-of-type(10) > ul > li {
+	display: grid;
+	grid-template-columns: 4.05em 4.05em auto;
+	grid-template-rows: repeat(3, 3.7em);
+	column-gap: 1em;
+
+}
+
+main > section:nth-of-type(10) > ul > li > h2 {
+	grid-column-start: 3;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 1;
+	color: var(--color-text);
+}
+
+main>section:nth-of-type(10)>ul>li p {
+	color: var(--color-text);
+}
+
+main>section:nth-of-type(10)>ul>li>p:nth-of-type(1) {
+	grid-column-start: 3;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 2;
+}
+
+main>section:nth-of-type(10)>ul>li>p:nth-of-type(2) {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 1;
+	grid-row-end: 1;
+	background-color: var(--color-donkerblauw);
+	color: var(--color-text-heading);
+	text-align: center;
+	margin: 0;
+	padding-top: 1em;
+}
+
+main>section:nth-of-type(10)>ul>li>p:nth-of-type(3) {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 2;
+	grid-row-end: 2;
+	text-align: center;
+	border: solid;
+	border-color: var(--color-border);
+
+}
+
+/* verjaardagen*/
+main > section:nth-of-type(11){
+	/* plaats op main grid grootscherm*/
+	grid-column: 2;
+	grid-row-start: 13;
+	grid-row-end: 15;
+}
+main > section:nth-of-type(11) > ul {
+	display: flex;
+}
+
+main>section:nth-of-type(11)>ul>li>ul li:nth-child(2n) {
+	background-color: var(--color-tabel-achtergrondLicht);
+	color: var(--color-text);
+}
+
+main>section:nth-of-type(11)>ul>li>ul li:nth-child(2n + 1) {
+	background-color: var(--color-tabel-achtergrondDonker);
+	color: var(--color-text);
+}
+
+main>section:nth-of-type(11)>ul>li>ul li:first-of-type {
+	background-color: var(--color-tabel-achtergrondHeading);
+	color: var(--color-text);
+	font-weight: 700;
+}
+
+/* Nieuwsberichten en verslagen */
+main > section:nth-of-type(12){
+	/* plaats op main grid grootscherm*/
+	grid-column: 2;
+	grid-row-start: 15;
+	grid-row-end: 19;
+}
+main > section:nth-of-type(12) > ul > li > a {
+	display: grid;
+	grid-template-columns: 8.1em auto;
+	grid-template-rows: repeat(2, 3.7em);
+	column-gap: 1em;
+	row-gap: 1em;
+	margin-bottom: 2em;
+}
+
+main>section:nth-of-type(12) > ul > li > a > img {
+	/*als flex kind*/
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	max-width: 8.1em;
+	max-height: 8.1em;
+	padding-top: 0.8em;
+}
+
+main > section:nth-of-type(12) > ul > li > a > h2 {
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
+
+main>section:nth-of-type(12)>ul>li>a>p:nth-of-type(1) {
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 2;
+}
+
+main>section:nth-of-type(12)>ul>li>a>p:nth-of-type(2) {
+	visibility: visible;
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 3;
+} 
+/* sponsoren */
+main > section:nth-of-type(13){
+	/* plaats op main grid grootscherm*/
+	grid-column: 2;
+	grid-row-start:19;
+	grid-row-end: 24;
+}
+
+footer {
+	background-color: var(--color-donkerblauw);
+	padding-top: 1%;
+	padding-left: 2%;
+}
+
+footer ul {
+	margin-bottom: 15%;
+}

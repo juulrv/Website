@@ -63,17 +63,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Muis en Toetsenbord 
-  De bediening met het toetsenbord gaat in principe prima. Alleen kun je in het menu boven in de dropdown menu's wel activeren maar wordt dit niet vertelt. De hover state wordt hier toegepast op de website. Op de telefoon gewoon meteen de active state. Ook kun je op de team pagina niet verder dan de eerste kop boven aan de pagina. Na het menu stopt het. 
+  De bediening met het toetsenbord gaat in principe prima. Alleen kun je in het menu boven in de dropdown menu's wel activeren maar wordt dit niet vertelt. De hover state wordt hier toegepast op de website. Op de telefoon gewoon meteen de active state. Ook kun je op de team pagina niet verder dan de eerste kop boven aan de pagina. Na het menu stopt het. De website heeft geen focus. Je kunt als gerbuiker niet zien waar je op de pagina bent en wat gefocused is op de website. Dat is zeker een punt dat ik aan ga pakken.
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+ De website is goed te bedienen met shocks. Alleen de knopjes om naar een volgende pagina te gaan zijn misschien wat klein. Je schiet snel uit met je muis. Door dat dit gebeurd klik je naast de knop.<img src="readme-images/screenshot_kleine_knopjes.png">
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  De website van de vinken heeft op dit moment nog geen dark/light mode. Verder is de website wel goed te lezen door mensen die kleurenblind zijn. Dit komt door het heldere contrast tussen elementen op de pagina. 
+  De website van de vinken heeft op dit moment nog geen dark/light mode. Verder is de website wel goed te lezen door mensen die kleurenblind zijn. Dit komt door het heldere contrast tussen elementen op de pagina. Bij de bril waar het rechter deel van de glazen is afgeschermd, was het lastig om de rechter kant van de volledige webpagina te lezen. Wel is een deel van de rechter pagina te zien waardoor de gebruiker weet dat er nog wat te zien is op het rechter deel van de pagina. En bij de bril central field loss is de pagina kun je alleen telkens het bovenste deel van de pagina lezen. 
 
 </details>
 
@@ -186,30 +184,22 @@ https://codepen.io/shooft/pen/YzLrEJo
   <summary>uitwerken na test in 8e werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Lijst met je bevindingen die in de test naar voren kwamen:
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+ De screenreader leest de datum's waarop het bericht geplaatst is, gewoon voor zonder te vertellen wat deze datum betekend. Het kan dus zo zijn dat in de kop een datum staat en dat daarna meteen de volgende datum wordt voorgelezen. Dit is heel verwarrend. Verder worden de uitslagen van de wedstrijden ook voorgelezen zonder context. De gebruiker heeft hier dus ook geen idee waarom deze getallen worden voorgelezen. Ook is het niet duidelijk welke teams tegen elkaar spelen. De teams worden zonder pauze voorgelezen. Dus bijvoorbeeld. De Vinken E1 SDO E1. Terwijl hij eigenlijk moet vertellen aan de gebruiker dat de teams tegen elkaar hebben gespeeld. Dus De Vinken E1 tegen SDO E1. Ook bij de sectie met informatie over de volgende wedstrijd van de Vinken 1 is het niet duidelijk om welk team het gaat. Om dit op te lossen heeft Sanne als tip gegeven een span om de tekst "tegen" te zetten en dan deze onzichtbaar te maken.
+<img src= "readme-images/screenshot_screenreader_aandachtspunt1.png">
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+ Met het toetsenbord zijn alle interactieve delen van de website te bereiken. Alleen de twee kopjes in de navigatie: Wedstrijden en Agenda zijn niet te bereiken. Dit moet nog even aanpassen. Het zijn a elementen maar ze hebben nog geen href. Deze moeten nog toegevoegd worden. Verder worden er 2 secties volledig geskipt. De sectie verjaardagen en de sectie agenda. Opzich logisch want deze secties hebben geen interactieve elementen. Verder is de Focus slecht te zien en moet nog aangepast worden. Op de officiële website is er geen focus. Dus de focus mag ik zelf gaan ontwerpen. Hij is op dit moment nog zwart, maar dat is bij de blauwe buttons niet goed te zien. Ik denk dat ik of voor de licht blauwe kleur ga die ook gebruikt wordt bij de active state. Of licht groen die ook gebruikt wordt in het logo.
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+ Mijn website is goed te bedienen wanneer een gerbuiker shocks heeft. Alleen ben ik vergeten de knopjes groter te maken. Dus deze zijn nog steeds te klein en moeten groter gemaakt worden.
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  De brillen hadden hetzelfde effect als de vorige keer dat ik ging testen. Deze ervaring was hetzelfde op mijn eigen website. De dark mode ga ik nog toevoegen om deze toegankelijkheid te verbeteren.
 
 </details>
 
@@ -229,13 +219,9 @@ https://codepen.io/shooft/pen/YzLrEJo
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
+  | Julia: Buttons in carousel, hoe scroll ik daarmee naar de volgende afbeelding?
+   Navigatie met dropdown in responsive design
+           
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
@@ -284,7 +270,7 @@ https://codepen.io/shooft/pen/YzLrEJo
 
   1. Voor het verbergen van content 
   https://www.a11yproject.com/posts/how-to-hide-content/
-  2. bron 2
+  2. Carousel scrollbar weghalen https://codepen.io/shooft/pen/abmLRMg?editors=0110
   3. ...
 
 </details>
