@@ -191,7 +191,8 @@ https://codepen.io/shooft/pen/YzLrEJo
 <img src= "readme-images/screenshot_screenreader_aandachtspunt1.png">
 
   #### Muis en Toetsenbord 
- Met het toetsenbord zijn alle interactieve delen van de website te bereiken. Alleen de twee kopjes in de navigatie: Wedstrijden en Agenda zijn niet te bereiken. Dit moet nog even aanpassen. Het zijn a elementen maar ze hebben nog geen href. Deze moeten nog toegevoegd worden. Verder worden er 2 secties volledig geskipt. De sectie verjaardagen en de sectie agenda. Opzich logisch want deze secties hebben geen interactieve elementen. Verder is de Focus slecht te zien en moet nog aangepast worden. Op de officiële website is er geen focus. Dus de focus mag ik zelf gaan ontwerpen. Hij is op dit moment nog zwart, maar dat is bij de blauwe buttons niet goed te zien. Ik denk dat ik of voor de licht blauwe kleur ga die ook gebruikt wordt bij de active state. Of licht groen die ook gebruikt wordt in het logo.
+ Met het toetsenbord zijn alle interactieve delen van de website te bereiken. Alleen de twee kopjes in de navigatie: Wedstrijden en Agenda zijn niet te bereiken. Dit moet nog even aanpassen. Het zijn a elementen maar ze hebben nog geen href. Deze moeten nog toegevoegd worden. Verder worden er 2 secties volledig geskipt. De sectie verjaardagen en de sectie agenda. Opzich logisch want deze secties hebben geen interactieve elementen. Verder is de Focus slecht te zien en moet nog aangepast worden. Op de officiële website is er geen focus. Dus de focus mag ik zelf gaan ontwerpen. Hij is op dit moment nog zwart, maar dat is bij de blauwe buttons niet goed te zien. Ik denk dat ik of voor de licht blauwe kleur ga die ook gebruikt wordt bij de active state. Of licht groen die ook gebruikt wordt in het logo. Ook kun je als het scherm klein is het menu niet openvouwen met de tab knop. Ook wordt het menu niet gefocused. 
+
 
 
   #### Motoriek (shocks, elastiekjes)
@@ -205,8 +206,6 @@ https://codepen.io/shooft/pen/YzLrEJo
 
 
 
-
-
 ## Voortgang 3 (week 4)
 
 <details>
@@ -215,21 +214,21 @@ https://codepen.io/shooft/pen/YzLrEJo
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
-
+<!-- Afbeeldingen plaatsen -->
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Julia: Buttons in carousel, hoe scroll ik daarmee naar de volgende afbeelding?
-   Navigatie met dropdown in responsive design
+  |Julia: Buttons in carousel, hoe scroll ik daarmee naar de volgende afbeelding?
+          Navigatie menu met drop downs werkt niet zoals het hoort. Waar heb ik een fout gemaakt. Navigatie met dropdown in responsive design
+   Arron: Vragen over zijn navigatie menu en hoe hij dit voor zijn website goed kan krijgen. In dropdown vorm. Hij heeft deze met Sanne gemaakt maar weet niet hoe hij de juiste styling hieraan kan geven.
+   Britney: - (Vragen werden persoonlijk aan de student assistent gesteld.)
+   Quinny: -. (Vragen werden persoonlijk aan de student assistent gesteld.)
            
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+ Tijdens de meeting is er vooral per persoon gekeken naar wat er nodig was om iets goed te krijgen. Er was niet echt een algemeen moment. Alleen in het begin heel eventjes. Voor mij was het navigatie menu het grootste probleem en daar wilde ik graag hulp bij. De list items kwamen in een row te staan in plaats van in een column en ze bleven zichtbaar en verdwenen niet.
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
 
+ De student assistenten kwamen mij persoonlijk helpen. En dit leverde wel wat op. Maar het menu werkte hierna helemaal niet meer. Na flink tijd gestoken te hebben in waar het precies fout ging, kwam Sanne mij nog even helpen met uitzoeken waar de fout zat. Het bleek zo te zijn dat ik de css van de navigatie voor het breedde scherm op de verkeerde plek had staan. Namelijk in het @media (min-width) gedeelte. Deze code moest ik dus even op de juiste plek zetten en dan de code voor de dropdown menu's toevoegen. Daarnaast had ik heel veel :nth-of-type(1) staan. Maar netter is het om first-of-type te gebruiken. Uiteindelijk om 17:45 ben ik toen naar huis gegaan. Terwijl mijn voortgangsgesprek om 14:40 ongeveer begon.
 </details>
 
 
@@ -270,7 +269,19 @@ https://codepen.io/shooft/pen/YzLrEJo
 
   1. Voor het verbergen van content 
   https://www.a11yproject.com/posts/how-to-hide-content/
-  2. Carousel scrollbar weghalen https://codepen.io/shooft/pen/abmLRMg?editors=0110
-  3. ...
+
+  .visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+  2. Carousel scrollbar weghalen: https://codepen.io/shooft/pen/abmLRMg?editors=0110
+  3. Om te kijken hoe ik de tijd in een time element moest noteren: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+  4. Voor de opmaak van een alleen de onderkant van een border: /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom */
+  5. 
 
 </details>

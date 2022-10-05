@@ -296,12 +296,6 @@ header section:nth-of-type(2) nav button {
 }
 
 
-header section:nth-of-type(2) nav.toonMenu button img {
-	content: url(https://assets.codepen.io/274456/ui-icon-cross.svg);
-
-}
-
-
 header section:nth-of-type(2) nav > ul {
 	display: flex;
 	margin: 0;
@@ -870,24 +864,26 @@ main > section:nth-of-type(7) > ul > li >ul{
 	height: 16em;
 }
 
-
+main > section:nth-of-type(7) > ul > li > ul > li{
+	padding-right: 4.5em;
+} 
 main > section:nth-of-type(7) > ul > li > ul li:nth-child(2n) {
 	background-color: var(--color-tabel-achtergrondLicht);
 	color: var(--color-text);
 	
 }
 
-main>section:nth-of-type(7)>ul>li>ul li:nth-child(2n + 1) {
+main > section:nth-of-type(7) > ul > li > ul li:nth-child(2n + 1) {
 	background-color: var(--color-tabel-achtergrondDonker);
 	color: var(--color-text);
 	
 }
 
-main>section:nth-of-type(7)>ul>li>ul li:first-of-type {
+main > section:nth-of-type(7) > ul > li > ul li:first-of-type {
 	background-color: var(--color-tabel-achtergrondHeading);
 	color: var(--color-text);
 	font-weight: 700;
-	padding-right: 4.5em;
+
 }
 
 /* Nieuwsberichten en verslagen */
