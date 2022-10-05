@@ -104,7 +104,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  De html schrijven ging goed. Door gebruik te maken van de breakdownschets ging dit ook vrij snel voor mijn gevoel. Ik twijfel nog een beetje over de code voor de navigatie. Aangezien er ook nog dropdown menu's bij moeten later. Maar dat is voor later. Mijn code ziet er op het moment zo uit. <img src="screenshot_eerste_versie_html.png"> De foto's voor in de header staan er 2x in omdat ik niet zo goed weet waar ik deze foto's het beste kan plaatsen. Dit ga ik vragen tijdens het voortgangs gesprek
+  De html schrijven ging goed. Door gebruik te maken van de breakdownschets ging dit ook vrij snel voor mijn gevoel. Ik twijfel nog een beetje over de code voor de navigatie. Aangezien er ook nog dropdown menu's bij moeten later. Maar dat is voor later. Mijn code ziet er op het moment zo uit. 
+  <img src="readme-images/screenshot_eerste_versie_html.png"> De foto's voor in de header staan er 2x in omdat ik niet zo goed weet waar ik deze foto's het beste kan plaatsen. Dit ga ik vragen tijdens het voortgangs gesprek
 
 
   ### Agenda voor meeting
@@ -218,7 +219,8 @@ https://codepen.io/shooft/pen/YzLrEJo
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  Ik heb geprobeerd om de dropdown menu's in de navigatie te krijgen. Dit is alleen niet gelukt. Telens als ik dit probeerde kwam het er heel raar uit te zien en werkte het menu niet meer. Ook was het menu dan niet meer responsive. Ik heb hier geen screenshots van gemaakt. Aangezien ik meer bezig was met alles naar de oude stand van zaken te brengen. Wel heb ik de html code nog. <img src="readme-images/navigatie_code_waar_alles_mis_ging.png">
+  Ik heb geprobeerd om de dropdown menu's in de navigatie te krijgen. Dit is alleen niet gelukt. Telens als ik dit probeerde kwam het er heel raar uit te zien en werkte het menu niet meer. Ook was het menu dan niet meer responsive. Ik heb hier geen screenshots van gemaakt. Aangezien ik meer bezig was met alles naar de oude stand van zaken te brengen. Wel heb ik de html code nog. 
+  <img src="readme-images/navigatie_code_waar_alles_mis_ging.png">
   De code die ik wilde gebruiken om het werkend te krijgen was die van Sanne, die we tijdens de vorige les besproken hadden. Bron Sanne 't Hoofd : https://codepen.io/shooft/pen/gOzGoww
   Maar waar het fout ging, weet ik nog niet.
 
@@ -255,20 +257,21 @@ https://codepen.io/shooft/pen/YzLrEJo
 
   ### Je uitkomst - karakteristiek screenshots:
   Small scherm in Dark mode
-<img src="readme-images/screenshot_eindproduct_small1.png" width="375px" alt="uitomst opdracht 1">
-<img src="readme-images/screenshot_eindproduct_small2.png" width="375px" alt="uitomst opdracht 2">
-<img src="readme-images/screenshot_eindproduct_small3.png" width="375px" alt="uitomst opdracht 3">
-<img src="readme-images/screenshot_eindproduct_small4.png" width="375px" alt="uitomst opdracht 4">
-<img src="readme-images/screenshot_eindproduct_small5" width="375px" alt="uitomst opdracht 5">
-<img src="readme-images/screenshot_eindproduct_small6.png" width="375px" alt="uitomst opdracht 6">
-<img src="readme-images/screenshot_eindproduct_small7.png" width="375px" alt="uitomst opdracht 7">
-<img src="readme-images/screenshot_eindproduct_small8.png" width="375px" alt="uitomst opdracht 8">
-<img src="readme-images/screenshot_eindproduct_small9.png" width="375px" alt="uitomst opdracht 9">
+<img src="readme-images/screenshot_eindproduct_small1.png" width="375px" alt="uitkomst opdracht 1">
+<img src="readme-images/screenshot_eindproduct_small2.png" width="375px" alt="uitkomst opdracht 2">
+<img src="readme-images/screenshot_eindproduct_small3.png" width="375px" alt="uitkomst opdracht 3">
+<img src="readme-images/screenshot_eindproduct_small4.png" width="375px" alt="uitkomst opdracht 4">
+<img src="readme-images/screenshot_eindproduct_small5.png" width="375px" alt="uitkomst opdracht 5">
+<img src="readme-images/screenshot_eindproduct_small6.png" width="375px" alt="uitkomst opdracht 6">
+<img src="readme-images/screenshot_eindproduct_small7.png" width="375px" alt="uitkomst opdracht 7">
+<img src="readme-images/screenshot_eindproduct_small8.png" width="375px" alt="uitkomst opdracht 8">
+<img src="readme-images/screenshot_eindproduct_small9.png" width="375px" alt="uitkomst opdracht 9">
+
 Breed scherm in Light mode
-<img src="readme-images/screenshot_eindproduct_breed1.png" width="375px" alt="uitomst opdracht 1 breed">
-<img src="readme-images/screenshot_eindproduct_breed2.png" width="375px" alt="uitomst opdracht 2 breed">
-<img src="readme-images/screenshot_eindproduct_breed3.png" width="375px" alt="uitomst opdracht 3 breed">
-<img src="readme-images/screenshot_eindproduct_breed4.png" width="375px" alt="uitomst opdracht 4 breed">
+<img src="readme-images/screenshot_eindproduct_breed1.png" width="375px" alt="uitkomst opdracht 1 breed">
+<img src="readme-images/screenshot_eindproduct_breed2.png" width="375px" alt="uitkomst opdracht 2 breed">
+<img src="readme-images/screenshot_eindproduct_breed3.png" width="375px" alt="uitkomst opdracht 3 breed">
+<img src="readme-images/screenshot_eindproduct_breed4.png" width="375px" alt="uitkomst opdracht 4 breed">
 
   ### Dit ging goed/Heb ik geleerd: 
   Het opstellen van de html ging erg goed. Dit ging makkelijk in combinatie met de breakdownschets die ik gemaakt had. Hierdoor kon ik een stuk makkelijker doorschrijven tijdens het schrijven van de css. Verder ging het gebruiken van de variabelen in het css document erg goed. Door deze meteen vanaf het begin al te gebruiken gaat het meteen goed en zo kon ik makkelijk de dark mode maken. Ook ben ik er erg blij mee dat het navigatie menu werkt. In de zin van dropdown menu's en dat hij responsive is.
