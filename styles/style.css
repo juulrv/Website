@@ -16,6 +16,7 @@ summary {
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+/* light theme */
 :root {
 	/* startje */
 	--color-text: #111;
@@ -30,6 +31,7 @@ summary {
 	--color-focus:#9DBF21;
 }
 
+/* dark theme */
 @media (prefers-color-scheme: dark){
 	:root {
 		--color-text: beige;
@@ -45,14 +47,7 @@ summary {
 	}
 }
 
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
-
+/* Standaard opmaak voor elementen */
 body {
 	margin: 0;
 	background-color: var(--color-background);
@@ -60,6 +55,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 
 }
+
 header {
 	width: 100%;
 	position: sticky;
@@ -82,6 +78,7 @@ p {
 h2 {
 	font-size: 1em;
 }
+
 h3{
 	color:var(--color-text)
 }
@@ -92,6 +89,7 @@ li {
 
 a {
 	text-decoration: none;
+	color: var(--color-text);
 }
 
 img {
@@ -104,8 +102,15 @@ img {
 	border-width: 0.5em;
 	outline: var(--color-focus);
 }
+li:focus{
+	border-color: var(--color-focus);
+	border-style: solid;
+	border-width: 0.5em;
+	outline: var(--color-focus);
+}
 
 /* Om element zichtbaar te houden voor screenreader. Maar niet visueel in beeld */
+/*  Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -116,7 +121,10 @@ img {
 	width: 1px;
 }
 
-/* Carousel header: Opmaak en positioneren buttons*/
+
+/* Carousel header: 
+
+Opmaak en positioneren buttons*/
 header section:first-of-type {
 	position: relative;
 	padding: 0;
@@ -146,7 +154,7 @@ header section:first-of-type button:nth-of-type(2) {
 }
 
 /* Opmaak pijltje in div */
-/* bron sanne: */
+/* bron sanne: https://codepen.io/shooft/pen/poVWpQQ*/
 header section:first-of-type button div {
 	width: 1.5em;
 	height: 1.5em;
@@ -202,7 +210,8 @@ header section:first-of-type button:nth-of-type(6) {
 	left: 56%
 }
 
-/* Carousel header: opmaak foto's en overflow */
+/* Carousel header: 
+opmaak foto's en overflow */
 header > section:first-of-type > ul {
 	display: flex;
 	overflow-x: auto;
@@ -220,6 +229,7 @@ header section ul::-webkit-scrollbar {
 	display: none;
 }
 
+/* Om te zorgen dat foto's altijd volledig op de pagina staan */
 header > section:first-of-type > ul > li {
 	/*als flex kind*/
 	flex-shrink: 0;
@@ -234,12 +244,15 @@ header > section:first-of-type > ul > li {
 
 }
 
+/* Grootte van de afbeelding in de carousel */
 header > section:first-of-type > ul > li > img {
 	width: 100%;
-	max-height: 30em;
 }
 
-/* Header navigatiebalk positie logo en navigatie*/
+
+/* Header navigatiebalk: Bron: https://codepen.io/shooft/pen/jOzvRvm
+
+positie logo en navigatie*/
 header section:nth-of-type(2) {
 	min-height: 4em;
 	padding: 0 1em;
@@ -249,8 +262,8 @@ header section:nth-of-type(2) {
 
 	/*Als flex parent*/
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 
 }
 
@@ -260,29 +273,33 @@ header section:nth-of-type(2) nav a {
 	text-decoration: none;
 }
 
-
-
 /* Grootte logo */
-header section:nth-of-type(2)>a:first-of-type img {
+header section:nth-of-type(2) > a:first-of-type img {
 	min-width: 3em;
 	min-height: 3em;
 }
 
 /* Hamburger Menu grootte */
-header section:nth-of-type(2)>a:last-of-type img {
+header section:nth-of-type(2) > a:last-of-type img {
 	width: auto;
 	height: 2em;
 }
 
 
-/* Navigatie menu */
+/* Navigatie menu positie*/
 header section:nth-of-type(2) nav {
 	order: 2;
 
 }
 
+/* Opmaak element nav wanneer actief. Werkt nog niet */
+header > section:nth-of-type(2) > li:active{
+	background-color: #0092D8;
+	font-weight: 700;
+}
+
+/* Opmaak van de buttons in de navigatie en positie */
 header section:nth-of-type(2) nav button {
-	padding: .5em;
 	appearance: none;
 	background-color: transparent;
 	border: none;
@@ -290,12 +307,11 @@ header section:nth-of-type(2) nav button {
 	font: inherit;
 	text-align: center;
 	color: var(--color-text-heading);
-
 	z-index: 100;
 	position: relative;
 }
 
-
+/* Om te zorgen dat de list items naast elkaar komen te staan. Dus de buttons in de nav */
 header section:nth-of-type(2) nav > ul {
 	display: flex;
 	margin: 0;
@@ -312,6 +328,7 @@ header section:nth-of-type(2) nav > ul {
 
 }
 
+/* Dropdown menu's verbergen als de dropdown niet open is */
 header section:nth-of-type(2) nav ul li ul {
 	max-height: 0;
 	overflow: hidden;
@@ -320,6 +337,15 @@ header section:nth-of-type(2) nav ul li ul {
 	padding-left: 0;
 }
 
+/* Opmaak van het dropdown menu wanneer het uitschuift */
+header section:nth-of-type(2) nav ul li ul.subMenu {
+	background-color: var(--color-donkerblauw);
+	max-height: 20em;
+	padding: 1em;
+	width: 20em;
+}
+
+/* Opmaak van de items in het dropdown menu */
 header section:nth-of-type(2) nav ul li {
 	text-align: left;
 	flex-basis: 3em;
@@ -327,22 +353,17 @@ header section:nth-of-type(2) nav ul li {
 	padding: 0.75em
 }
 
+/* Opmaak van de items in het dropdown menu als je eroverheen hovert */
 header section:nth-of-type(2) nav ul li:hover {
 	background-color: var(--color-active);
 }
 
-
-header section:nth-of-type(2) nav ul li ul.subMenu {
-	background-color: var(--color-donkerblauw);
-	max-height: 20em;
-	padding: 1em;
-	width: 20em;
-
-}
-
+/* Om te zorgen dat het hamburger menu niet zichtbaar is als deze nog niet geopend is */
 header section:nth-of-type(2) nav.toonMenu>ul {
 	transform: translateX(0%);	
 }
+
+/* Om te zorgen dat de list items in de dropdown wat meer ruimte hebben */
 header section:nth-of-type(2) nav ul li ul li{
 	padding: 2%;
 }
@@ -376,7 +397,7 @@ header section:nth-of-type(2) nav button.active {
 		order: 0;
 	}
 
-	header section:nth-of-type(2) nav>button {
+	header section:nth-of-type(2) nav > button {
 		display: none;
 	}
 
@@ -433,6 +454,7 @@ main > ul:first-of-type {
 	grid-row-end: 4;
 	grid-column: 1;
 	/*als flex parent*/
+	/* Om te zorgen dat de nieuwsberichten onder elkaar komen te staan */
 	display: flex;
 	max-height: 30em;
 	flex-direction: column;
@@ -498,6 +520,7 @@ main > ul > li > a > p h3 {
 main section > h2{
 	background-color: var(--color-donkerblauw);
 	padding:0.5em;
+	font-size: larger;
 }
 
 
@@ -580,6 +603,8 @@ main section:nth-of-type(2) ul a{
 	grid-template-columns: 8.1em auto;
 	grid-template-rows: repeat(3, 3.7em);
 	column-gap: 1em;
+	border-bottom: solid;
+	border-color: var(--color-border);
 }
 main section:nth-of-type(2) ul a h3{
 	grid-column-start: 2;
@@ -629,7 +654,6 @@ main section section button div{
 	width: 1.0em;
 	height: 1.0em;
 	box-shadow: inset .25em -.25em 0 white;
-	/* transform: translateZ(-1px) rotate(-135deg); */
 	rotate: -135deg;
 	
 }
@@ -671,8 +695,8 @@ main section:nth-of-type(4) {
 	/* plaats op main grid grootscherm*/
 	grid-column-start: 1;
 	grid-column-end: 1;
-	grid-row-start: 20;
-	grid-row-end: 22;
+	grid-row-start: 21;
+	grid-row-end: 23;
 }
 main section:nth-of-type(4) ul{
 	max-width: 100%;
@@ -691,9 +715,9 @@ main > a:first-of-type > h2 {
 	color: var(--color-text-heading);
 	background-color: var(--color-donkerblauw);
 	text-align: center;
-	padding: 2%;
+	font-size: larger;
+	padding: 3%;
 	width: 100%;
-	margin-left: 5%;
 	margin-right: 5%;
 	/* plaats op main grid grootscherm*/
 	grid-column-start: 2;
@@ -713,74 +737,110 @@ main section:nth-of-type(5) {
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 6;
+	background-color: var(--color-tabel-achtergrondLicht);
+	border-style: solid;
+	border-color: var(--color-border);
 }
 
 main section:nth-of-type(5) h2 {
 	order: 1;
 	background-color: var(--color-donkerblauw);
-	padding: 0.75em;
-	margin-top: 0.75em;
+	display: block;
+	margin: 0;
 }
 
 main section:nth-of-type(5) p {
 	color: var(--color-text);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding:1em;
+	background-color: var(--color-tabel-achtergrondLicht);
 }
 
+/* Positie kopje volgende wedstrijd */
 main section:nth-of-type(5) > p:nth-of-type(1) {
 	order: 2;
 }
 
+/* Positie kopje competitie*/
 main section:nth-of-type(5) > p:nth-of-type(2) {
 	order: 3;
 }
 
+/* Opmaak en positie naam team 2 */
 main section:nth-of-type(5) > p:nth-of-type(3) {
 	order: 5;
+	background-color: var(--color-tabel-achtergrondDonker);
 }
 
+/* Opmaak en positie VS */
 main section:nth-of-type(5) > p:nth-of-type(4) {
 	order: 6;
+	background-color: var(--color-tabel-achtergrondDonker);
 }
 
+/* Opmaak en positie naam team 2 */
 main section:nth-of-type(5) > p:nth-of-type(5) {
-	order: 7
+	order: 7;
+	background-color: var(--color-tabel-achtergrondDonker);
+	
 }
-
+/* Opmaak en positie datum */
 main section:nth-of-type(5) > p:nth-of-type(6) {
-	order: 9
+	order: 9;
+	border-top: solid;
+	border-color: var(--color-border);
+
 }
 
+/* Opmaak en positie locatie */
 main section:nth-of-type(5) > p:nth-of-type(7) {
-	order: 10
+	order: 10;
+	border-bottom: solid;
+	border-color: var(--color-border);
 }
 
+/* Grootte en positie afbeelding tegenstander */
 main section:nth-of-type(5) img:nth-of-type(1) {
 	order: 4;
-	width:10%
+	width:10%;
+	margin: 0.5em;
 }
 
+/* Grootte en positie afbeelding de Vinken */
 main section:nth-of-type(5) img:nth-of-type(2) {
 	order: 8;
-	width:10%
+	width:10%;
+	margin: 0.5em;
 }
 
+/* Grid om aftelklok juist weer te geven + positie aftelklok */
 main section:nth-of-type(5) section {
 	display: grid;
 	grid-template-columns: repeat(4, 3.5em);
 	grid-template-rows: repeat(2, 3.5em);
 	order: 11;
+	margin-top:1em;
 }
 
+/* Opmaak van aftelklok per onderdeel */
 main section:nth-of-type(5) section p {
 	margin: 0;
+	background-color: var(--color-tabel-achtergrondDonker);
+	width: 100%;
 }
 
+/* opmaak en plaatsing a wedstrijdinformatie */
 main section:nth-of-type(5) a {
 	order: 11;
 	background-color: var(--color-donkerblauw);
 	color: var(--color-text-heading);
-	padding: 1em
+	padding: 6%;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
+
 
 /*agenda komende twee weken*/
 main > section:nth-of-type(6){
@@ -793,13 +853,20 @@ grid-row-end: 14;
 
 main > section:nth-of-type(6) > ul{
 	padding:0;
+	margin-bottom: 1em;
 }
 
 main > section:nth-of-type(6) > ul > li {
 	display: grid;
 	grid-template-columns: 4.05em 4.05em auto;
-	grid-template-rows: repeat(3, 3.7em);
-	column-gap: 1em;
+	grid-template-rows: repeat(2, 3.7em);
+	column-gap: 0.5em;
+	row-gap: 0.2em;
+
+	border-bottom: solid;
+	border-color: var(--color-border);
+	padding-bottom: 1em;
+	padding-top: 1em;
 
 }
 
@@ -808,6 +875,7 @@ main > section:nth-of-type(6) > ul > li > h3 {
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 1;
+
 	color: var(--color-text);
 }
 
@@ -827,22 +895,27 @@ main > section:nth-of-type(6) > ul > li > p:nth-of-type(2) {
 	grid-column-end: 1;
 	grid-row-start: 1;
 	grid-row-end: 1;
+
 	background-color: var(--color-donkerblauw);
 	color: var(--color-text-heading);
 	text-align: center;
-	margin: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0;
 	padding-top: 1em;
 }
-
+/* Linear gradient: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient */
 main > section:nth-of-type(6) > ul > li > p:nth-of-type(3) {
 	grid-column-start: 1;
 	grid-column-end: 1;
 	grid-row-start: 2;
 	grid-row-end: 2;
-	text-align: center;
-	border: solid;
-	border-color: var(--color-border);
 
+	padding-top: 1.2em;
+	margin: 0;
+	margin-bottom: 0.5em;
+	text-align: center;
+	color: var(--color-text);
+	background: linear-gradient(0.5turn, var(--color-tabel-achtergrondDonker), var(--color-tabel-achtergrondLicht), var(--color-tabel-achtergrondDonker));
 }
 
 /* verjaardagen*/
@@ -857,6 +930,7 @@ main > section:nth-of-type(7){
 main > section:nth-of-type(7) > ul {
 	display: flex;
 	padding: 0;
+	
 }
 
 main > section:nth-of-type(7) > ul > li >ul{
@@ -865,8 +939,17 @@ main > section:nth-of-type(7) > ul > li >ul{
 }
 
 main > section:nth-of-type(7) > ul > li > ul > li{
-	padding-right: 4.5em;
+	width: 10em;
+	padding: 2%;
 } 
+
+main > section:nth-of-type(7) > ul > li > ul li:first-of-type {
+	background-color: var(--color-tabel-achtergrondHeading);
+	color: var(--color-text);
+	font-weight: 700;
+	width:8.8em;
+}
+
 main > section:nth-of-type(7) > ul > li > ul li:nth-child(2n) {
 	background-color: var(--color-tabel-achtergrondLicht);
 	color: var(--color-text);
@@ -879,20 +962,14 @@ main > section:nth-of-type(7) > ul > li > ul li:nth-child(2n + 1) {
 	
 }
 
-main > section:nth-of-type(7) > ul > li > ul li:first-of-type {
-	background-color: var(--color-tabel-achtergrondHeading);
-	color: var(--color-text);
-	font-weight: 700;
-
-}
 
 /* Nieuwsberichten en verslagen */
 main > section:nth-of-type(8){
 	/* plaats op main grid grootscherm*/
 	grid-column-start: 2;
 	grid-column-end: 2;
-	grid-row-start: 15;
-	grid-row-end: 20;
+	grid-row-start: 16;
+	grid-row-end: 21;
 }
 
 main section:nth-of-type(8) > h2:first-of-type {
@@ -908,9 +985,8 @@ main section:nth-of-type(8) > h2:first-of-type {
 main > section:nth-of-type(8) > ul > li > a {
 	display: grid;
 	grid-template-columns: 8.1em auto;
-	grid-template-rows: repeat(3, 3.7em);
+	grid-template-rows: repeat(2, 3.7em);
 	column-gap: 1em;
-	padding-bottom: 2em;
 	border-bottom: solid;
 	border-color: var(--color-border);
 	/* https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom */
@@ -945,14 +1021,22 @@ main > section:nth-of-type(8) > ul > li > a > p:nth-of-type(1) {
 	grid-row-end: 3;
 }
 
+main>section:nth-of-type(8)>ul>li>a>p:nth-of-type(2) {
+	visibility: visible;
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 3;
+} 
+
 
 /* Sponsoren */
 main > section:nth-of-type(9){
 	/* plaats op main grid grootscherm*/
 	grid-column-start: 2;
 	grid-column-end: 2;
-	grid-row-start: 20;
-	grid-row-end: 22;
+	grid-row-start: 21;
+	grid-row-end: 23;
 }
 /* Afbeeldingen (li) naast elkaar plaatsen + scrollbaar*/
 main > section:nth-of-type(9) > ul {
@@ -993,10 +1077,18 @@ footer {
 	padding-left: 2%;
 }
 
+footer img{
+	width:50%;
+}
+
 footer ul {
-	margin-bottom: 15%;
+	margin-bottom: 5%;
 }
 footer h3{
+	color: var(--color-achtergrondHeading);
+}
+
+footer a{
 	color: var(--color-achtergrondHeading);
 }
 

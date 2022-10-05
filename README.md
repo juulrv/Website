@@ -150,7 +150,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   | Quinny
   Hoe maak je een drop down icoontje. Een pijltje naar beneden.
-  Sanne heeft samen met ons een icoontje gemaakt. Ook heeft hij hier een draaid pijltje van gemaakt zodat als je het menu opent het pijltj omdraait. De code heeft hij in codepen gezet. 
+  Sanne heeft samen met ons een icoontje gemaakt. Ook heeft hij hier een draaid pijltje van gemaakt zodat als je het menu opent het pijltje omdraait. De code heeft hij in codepen gezet. 
 https://codepen.io/shooft/pen/poVWpQQ
 
   | Britney
@@ -218,7 +218,7 @@ https://codepen.io/shooft/pen/YzLrEJo
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  Ik heb geprobeerd om de dropdown menu's in de navigatie te krijgen. Dit is alleen niet gelukt. Telens als ik dit probeerde kwam het er heel raar uit te zien en werkte het menu niet meer. Ook was het menu dan niet meer responsive. Ik heb hier geen screenshots van gemaakt. Aangezien ik meer bezig was met alles naar de oude stand van zaken te brengen. Wel heb ik de html code nog. <img src="readme-images/navigatie_waar_alles_mis_ging.png">
+  Ik heb geprobeerd om de dropdown menu's in de navigatie te krijgen. Dit is alleen niet gelukt. Telens als ik dit probeerde kwam het er heel raar uit te zien en werkte het menu niet meer. Ook was het menu dan niet meer responsive. Ik heb hier geen screenshots van gemaakt. Aangezien ik meer bezig was met alles naar de oude stand van zaken te brengen. Wel heb ik de html code nog. <img src="readme-images/navigatie_code_waar_alles_mis_ging.png">
   De code die ik wilde gebruiken om het werkend te krijgen was die van Sanne, die we tijdens de vorige les besproken hadden. Bron Sanne 't Hoofd : https://codepen.io/shooft/pen/gOzGoww
   Maar waar het fout ging, weet ik nog niet.
 
@@ -254,19 +254,39 @@ https://codepen.io/shooft/pen/YzLrEJo
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  Small scherm in Dark mode
+<img src="readme-images/screenshot_eindproduct_small1.png" width="375px" alt="uitomst opdracht 1">
+<img src="readme-images/screenshot_eindproduct_small2.png" width="375px" alt="uitomst opdracht 2">
+<img src="readme-images/screenshot_eindproduct_small3.png" width="375px" alt="uitomst opdracht 3">
+<img src="readme-images/screenshot_eindproduct_small4.png" width="375px" alt="uitomst opdracht 4">
+<img src="readme-images/screenshot_eindproduct_small5" width="375px" alt="uitomst opdracht 5">
+<img src="readme-images/screenshot_eindproduct_small6.png" width="375px" alt="uitomst opdracht 6">
+<img src="readme-images/screenshot_eindproduct_small7.png" width="375px" alt="uitomst opdracht 7">
+<img src="readme-images/screenshot_eindproduct_small8.png" width="375px" alt="uitomst opdracht 8">
+<img src="readme-images/screenshot_eindproduct_small9.png" width="375px" alt="uitomst opdracht 9">
+Breed scherm in Light mode
+<img src="readme-images/screenshot_eindproduct_breed1.png" width="375px" alt="uitomst opdracht 1 breed">
+<img src="readme-images/screenshot_eindproduct_breed2.png" width="375px" alt="uitomst opdracht 2 breed">
+<img src="readme-images/screenshot_eindproduct_breed3.png" width="375px" alt="uitomst opdracht 3 breed">
+<img src="readme-images/screenshot_eindproduct_breed4.png" width="375px" alt="uitomst opdracht 4 breed">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Het opstellen van de html ging erg goed. Dit ging makkelijk in combinatie met de breakdownschets die ik gemaakt had. Hierdoor kon ik een stuk makkelijker doorschrijven tijdens het schrijven van de css. Verder ging het gebruiken van de variabelen in het css document erg goed. Door deze meteen vanaf het begin al te gebruiken gaat het meteen goed en zo kon ik makkelijk de dark mode maken. Ook ben ik er erg blij mee dat het navigatie menu werkt. In de zin van dropdown menu's en dat hij responsive is.
+  Ook ben ik blij dat het gelukt is om een mooi grid te maken waarbij de content mooi verdeeld wordt over de pagina.
+  Als laatste ben ik blij met de aftelklok die ik gemaakt heb. De javascript code heb ik in één keer geschreven. (Als je niet de keren mee telt toen de javascript nog niet gekoppelt was). 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/breakdown_schets_deel1.png" width="375px" alt="top">
+  <img src="readme-images/dark_mode_code.png" width="375px" alt="top">
+  <img src="readme-images/foto_werkend_menu1.png" width="375px" alt="top">
+  <img src="readme-images/foto_werkend_menu2.png" width="375px" alt="top">
+   <img src="readme-images/foto_werkend_menu3.png" width="375px" alt="top">
+  <img src="readme-images/foto_werkend_menu4.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Wat ik eigenlijk het vervelendste vind van wat er niet werkt is dat de focus in het navigatie menu niet werkt. Op alle a elementen op de pagina werkt het wel. Allen in de header niet. Ook schuift en menu niet uit als je door de navigatie heen tabt. Erg jammer.
+  Wat ik ook wel jammer vind is dat het niet gelukt is om de carousel in de header werkend te krijgen. Sanne had wel een voorbeeld van een carousel die erg leek op die van mij. Maar ik begreep er kort weg niks van en heb hem dus ook niet toe kunnen voegen aan mijn website.
+  Verder doen de knopjes om naar de volgende pagina te gaan van bijvoorbeeld de nieuwsberichten het ook niet. Ik liep hier tegen hetzelfde probleem aan als die van de carousel in de header. 
 </details>
 
 
@@ -295,6 +315,10 @@ https://codepen.io/shooft/pen/YzLrEJo
   2. Carousel scrollbar weghalen: https://codepen.io/shooft/pen/abmLRMg?editors=0110
   3. Om te kijken hoe ik de tijd in een time element moest noteren: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
   4. Voor de opmaak van een alleen de onderkant van een border: /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom */
-  5. 
+  5. Linear gradient: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
+  6. Voor de opmaak van een pijltje in een div (door Sanne):
+  https://codepen.io/shooft/pen/poVWpQQ
+  7. Navigatie menu opbouw (door Sanne): https://codepen.io/shooft/pen/jOzvRvm
+
 
 </details>

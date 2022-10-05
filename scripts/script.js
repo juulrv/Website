@@ -68,7 +68,7 @@ function vijfdeToggleMenu() {
 	vijfdeSubmenu.classList.toggle("subMenu");
 }
 
-// Aftelklok volgende wedstrijd
+// Aftelklok volgende wedstrijd eerste op de pagina
 var aftelSecondenOpScherm = document.querySelector("#aftelSecondenP")
 var aftelMinutenOpScherm = document.querySelector("#aftelMinutenP")
 var aftelUrenOpScherm = document.querySelector("#aftelUrenP")
@@ -80,7 +80,7 @@ var aftelMinuten = 32
 var aftelUren = 3
 var aftelDagen = 5
 
-aftelDagenOpScherm.textContent = 5
+aftelDagenOpScherm.textContent =  5
 aftelUrenOpScherm.textContent = 3
 aftelMinutenOpScherm.textContent = 32
 aftelSecondenOpScherm.textContent = 59
@@ -88,8 +88,10 @@ aftelSecondenOpScherm.textContent = 59
 aftelDagenOpScherm.addEventListener("click", minSeconde)
 
 function minSeconde(){
+   
     aftelSeconden = aftelSeconden - 1
     aftelSecondenOpScherm.textContent= aftelSeconden
+
     if(aftelSeconden == -1){
         aftelMinuten = aftelMinuten - 1
         aftelMinutenOpScherm.textContent = aftelMinuten
@@ -112,7 +114,7 @@ function minSeconde(){
 }
 setInterval(minSeconde, 1000);
 
-// Aftelklok volgende wedstrijd
+// Aftelklok volgende wedstrijd tweede op de pagina
 var aftelSecondenOpScherm2 = document.querySelector("section:nth-of-type(9) section p:nth-of-type(4)")
 var aftelMinutenOpScherm2 = document.querySelector("section:nth-of-type(9) section p:nth-of-type(3)")
 var aftelUrenOpScherm2 = document.querySelector("section:nth-of-type(9) section p:nth-of-type(2)")
@@ -124,7 +126,7 @@ var aftelMinuten2 = 32
 var aftelUren2 = 3
 var aftelDagen2 = 5
 
-aftelDagenOpScherm2.textContent = 5
+aftelDagenOpScherm2.textContent =  5
 aftelUrenOpScherm2.textContent = 3
 aftelMinutenOpScherm2.textContent = 32
 aftelSecondenOpScherm2.textContent = 59
@@ -162,12 +164,4 @@ if (aftelSecondenOpScherm2) {
 
 
 
-var eersteButton = document.querySelector("header section:nth-of-type(2) nav ul li:nth-of-type(2) button");
-var eersteSubmenu = document.querySelector("header section:nth-of-type(2) nav ul li:nth-of-type(2) ul");
-
-eersteButton.addEventListener("click", toggleEersteMenu);
-
-function toggleEersteMenu() {
-	eersteSubmenu.classList.toggle("subMenu");
-}
 
