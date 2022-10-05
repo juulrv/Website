@@ -63,7 +63,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Muis en Toetsenbord 
-  De bediening met het toetsenbord gaat in principe prima. Alleen kun je in het menu boven in de dropdown menu's wel activeren maar wordt dit niet vertelt. De hover state wordt hier toegepast op de website. Op de telefoon gewoon meteen de active state. Ook kun je op de team pagina niet verder dan de eerste kop boven aan de pagina. Na het menu stopt het. De website heeft geen focus. Je kunt als gerbuiker niet zien waar je op de pagina bent en wat gefocused is op de website. Dat is zeker een punt dat ik aan ga pakken.
+  De bediening met het toetsenbord gaat in principe prima. Alleen kun je in het menu boven in de dropdown menu's wel activeren maar wordt dit niet vertelt. De hover state wordt hier toegepast op de website. Op de telefoon heeft meteen de active state. Ook kun je op de team pagina niet verder dan de eerste kop boven aan de pagina. Na het menu stopt het. De website heeft ook geen focus. Je kunt als gerbuiker niet zien waar je op de pagina bent en wat gefocused is op de website. Dit kun je zien doordat onderin het scherm wel wordt weergegeven, naar welke pagina je gaat als je op enter drukt. Dit krijg je ook te zien als met de muis eroverheen hovert. Maar als je dus met de tab er op focused, zie je onderin welke geselecteerd staat. Maar ditis niet te zien op de website zelf. (zie afbeelding) Dat is zeker een punt dat ik aan ga pakken. 
+  <img src="readme-images/geen_focus_state.png">
 
 
   #### Motoriek (shocks, elastiekjes)
@@ -103,7 +104,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  De html schrijven ging goed. Door gebruik te maken van de breakdownschets ging dit ook vrij snel voor mijn gevoel. Ik twijfel nog een beetje over de code voor de navigatie. Aangezien er ook nog dropdown menu's bij moeten later. Maar dat is voor later. Mijn code ziet er op het moment zo uit. <img src="screenshot_eerste_versie_html.png"> De foto's voor in de header staan er 2x in omdat ik niet zo goed weet waar ik deze foto's het beste kan plaatsen. Dit ga ik vragen tijdens het voortgangs gesprek
 
 
   ### Agenda voor meeting
@@ -113,7 +114,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | Quinny: Hoe zet ik de basis op voor mijn hamburger menu?
   ### Verslag van meeting
   Tijdens de meeting waren alleen ik en Quinny er. We kregen feedback van de studentassistenten. We hebben gekeken naar de html van onze pagina's en of deze goed genest stonden. Sommige onderdelen waren nog niet helemaal goed genest en moesten aangepast worden. Zoals items die in een ul stonden maar geen li om zich heen hadden. En verder hebben we gekeken naar punten die ik zelf kon verbeteren aan de website. Zoals de hamburger menu button die niet van vorm veranderde. En de header carousel die niet goed responive is op de originele site.
-  Verder hand Quinny nog een vraag over hoe ze het hamburgermenu het beste kon beginnen. Het antwoord op deze vraag was een unorderd list maken met de menu opties als list items
+  Verder hand Quinny nog een vraag over hoe ze het hamburgermenu het beste kon beginnen. Het antwoord op deze vraag was een unorderd list maken met de menu opties als list items. Verder kreeg ik nog als tip om zo snel mogelijk te beginnen met de css. Omdat daar ook veel tijd in gaat zitten. Nog meer dan in de Html. Voor de afbeeldingen is het belangrijk om die in een unorderd list te zetten. En van de img list items te maken. De tweede versie die ik dus heb staan in mijn code is dus beter.
 </details>
 
 
@@ -126,7 +127,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  De Carousel maken is gelukt. Ik mis alleen nog de buttons die er voor zorgen dat je naar de volgende pagina kan, en de vierkantjes onderin waarmee je naar een foto kan navigeren. Verder heb ik een responsive navigatie menu gemaakt, die veranderd in een hamburger menu als het scherm kleiner wordt dan 51em. Ook is het gelukt om de nieuwsberichten vorm tegeven met grid. 
+  De Carousel maken is gelukt. Ik mis alleen nog de buttons die er voor zorgen dat je naar de volgende pagina kan, en de vierkantjes onderin waarmee je naar een foto kan navigeren. Verder heb ik een responsive navigatie menu gemaakt, die veranderd in een hamburger menu als het scherm kleiner wordt dan 51em. Alleen heeft de navigatie nog geen dropdown menu's. Ook is het gelukt om de nieuwsberichten vorm tegeven met grid. 
 
 
   ### Agenda voor meeting
@@ -185,6 +186,11 @@ https://codepen.io/shooft/pen/YzLrEJo
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  Knopjes zijn nog te klein.
+  Sommige knoppen in de nav zijn niet te bereiken.
+  Screenreader leest door zonder pauzes. Zorgt voor verwarring.
+  Nog geen dark mode.
+  Uitslagen van de wedstrijden ook voorgelezen zonder context.
 
   #### Screenreader
  De screenreader leest de datum's waarop het bericht geplaatst is, gewoon voor zonder te vertellen wat deze datum betekend. Het kan dus zo zijn dat in de kop een datum staat en dat daarna meteen de volgende datum wordt voorgelezen. Dit is heel verwarrend. Verder worden de uitslagen van de wedstrijden ook voorgelezen zonder context. De gebruiker heeft hier dus ook geen idee waarom deze getallen worden voorgelezen. Ook is het niet duidelijk welke teams tegen elkaar spelen. De teams worden zonder pauze voorgelezen. Dus bijvoorbeeld. De Vinken E1 SDO E1. Terwijl hij eigenlijk moet vertellen aan de gebruiker dat de teams tegen elkaar hebben gespeeld. Dus De Vinken E1 tegen SDO E1. Ook bij de sectie met informatie over de volgende wedstrijd van de Vinken 1 is het niet duidelijk om welk team het gaat. Om dit op te lossen heeft Sanne als tip gegeven een span om de tekst "tegen" te zetten en dan deze onzichtbaar te maken.
@@ -212,11 +218,12 @@ https://codepen.io/shooft/pen/YzLrEJo
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik heb geprobeerd om de dropdown menu's in de navigatie te krijgen. Dit is alleen niet gelukt. Telens als ik dit probeerde kwam het er heel raar uit te zien en werkte het menu niet meer. Ook was het menu dan niet meer responsive. Ik heb hier geen screenshots van gemaakt. Aangezien ik meer bezig was met alles naar de oude stand van zaken te brengen. Wel heb ik de html code nog. <img src="readme-images/navigatie_waar_alles_mis_ging.png">
+  De code die ik wilde gebruiken om het werkend te krijgen was die van Sanne, die we tijdens de vorige les besproken hadden. Bron Sanne 't Hoofd : https://codepen.io/shooft/pen/gOzGoww
+  Maar waar het fout ging, weet ik nog niet.
 
-<!-- Afbeeldingen plaatsen -->
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  Samen met je groepje opstellen
 
   |Julia: Buttons in carousel, hoe scroll ik daarmee naar de volgende afbeelding?
           Navigatie menu met drop downs werkt niet zoals het hoort. Waar heb ik een fout gemaakt. Navigatie met dropdown in responsive design
@@ -229,6 +236,12 @@ https://codepen.io/shooft/pen/YzLrEJo
 
 
  De student assistenten kwamen mij persoonlijk helpen. En dit leverde wel wat op. Maar het menu werkte hierna helemaal niet meer. Na flink tijd gestoken te hebben in waar het precies fout ging, kwam Sanne mij nog even helpen met uitzoeken waar de fout zat. Het bleek zo te zijn dat ik de css van de navigatie voor het breedde scherm op de verkeerde plek had staan. Namelijk in het @media (min-width) gedeelte. Deze code moest ik dus even op de juiste plek zetten en dan de code voor de dropdown menu's toevoegen. Daarnaast had ik heel veel :nth-of-type(1) staan. Maar netter is het om first-of-type te gebruiken. Uiteindelijk om 17:45 ben ik toen naar huis gegaan. Terwijl mijn voortgangsgesprek om 14:40 ongeveer begon.
+ <img src="readme-images/foto_werkend_menu1.png">
+ <img src="readme-images/foto_werkend_menu2.png">
+ <img src="readme-images/foto_werkend_menu3.png">
+ <img src="readme-images/foto_werkend_menu4.png">
+ <img src="readme-images/foto_werkend_menu5.png">
+
 </details>
 
 
